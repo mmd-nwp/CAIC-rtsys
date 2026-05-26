@@ -1,0 +1,130 @@
+ &userin
+ title='LABEL',
+ titlecolor='def.foreground', idotitle=1,
+ flmin=.005, frmax=.92, fbmin=.125, ftmax=.921,
+ ptimes=FCST,
+ ptimeunits='h',timezone=-7,iusdaylightrule=1,
+ tacc=600.,iinittime=0,ivalidtime=1,inearesth=1,
+ ntextq=0,ntextcd=0,fcoffset=0.0,
+ icgmsplit=0, itrajcalc=0, maxfld=15,imakev5d=0
+ &end
+-------------------------------------------------------------------------------
+                                 COLOR TABLE
+COLOR                | RED  | GREEN | BLUE | NUMBER
+-------------------------------------------------------------------------------
+def.background       | 1.00 | 1.00  | 1.00 |  0       (DEFAULT BACKGROUND)
+def.foreground       | 0.00 | 0.00  | 0.00 |  1       (DEFAULT FOREGROUND)
+light.gray           | 0.75 | 0.75  | 0.75 |  2
+lmed.gray            | 0.65 | 0.65  | 0.65 |  3
+med.gray             | 0.50 | 0.50  | 0.50 |  3
+dark.gray            | 0.25 | 0.25  | 0.25 |  4
+red                  | 1.00 | 0.00  | 0.00 |  5
+orange               | 1.00 | 0.50  | 0.00 |  6
+yellow               | 1.00 | 1.00  | 0.00 |  7
+green                | 0.00 | 1.00  | 0.00 |  8
+blue                 | 0.00 | 0.00  | 1.00 |  9
+violet               | 0.50 | 0.00  | 0.50 | 10
+light.red            | 1.00 | 0.50  | 0.50 | 11
+light.orange         | 1.00 | 0.75  | 0.50 | 12
+light.yellow         | 1.00 | 1.00  | 0.50 | 13
+light.green          | 0.75 | 1.00  | 0.75 | 14
+light.blue           | 0.50 | 0.50  | 1.00 | 15
+light.violet         | 0.75 | 0.50  | 0.75 | 16
+dark.red             | 0.50 | 0.00  | 0.00 | 17
+brown                | 0.50 | 0.25  | 0.00 | 18
+dark.yellow          | 0.75 | 0.75  | 0.00 | 19
+dark.green           | 0.00 | 0.50  | 0.00 | 20
+dark.blue            | 0.00 | 0.00  | 0.50 | 21
+c22                  | 1.00 | 0.50  | 0.50 | 22
+c23                  | 1.00 | 0.60  | 0.50 | 23
+c24                  | 1.00 | 0.70  | 0.50 | 24
+c25                  | 1.00 | 0.80  | 0.50 | 25
+c26                  | 1.00 | 0.90  | 0.50 | 26
+c27                  | 1.00 | 1.00  | 0.50 | 27
+c28                  | 0.90 | 1.00  | 0.50 | 28
+c29                  | 0.80 | 1.00  | 0.50 | 29
+c30                  | 0.70 | 1.00  | 0.50 | 30
+c31                  | 0.60 | 1.00  | 0.50 | 31
+c32                  | 0.50 | 1.00  | 0.50 | 32
+c33                  | 0.50 | 1.00  | 0.65 | 33
+c34                  | 0.50 | 1.00  | 0.80 | 34
+c35                  | 0.50 | 1.00  | 0.90 | 35
+c36                  | 0.50 | 1.00  | 1.00 | 36
+c37                  | 0.50 | 0.90  | 1.00 | 37
+c38                  | 0.50 | 0.80  | 1.00 | 38
+c39                  | 0.50 | 0.70  | 1.00 | 39
+c40                  | 0.50 | 0.60  | 1.00 | 40
+c41                  | 0.50 | 0.50  | 1.00 | 41
+c42                  | 0.60 | 0.60  | 1.00 | 42
+c43                  | 0.50 | 0.0620 |1.00 | 43
+c44                  |0.1250|0.     |1.0000| 44
+c45                  |0.3120|0.     |1.0000| 45
+c46                  |0.5000|0.     |1.0000| 46
+c47                  |0.6880|0.     |1.0000| 47
+c48                  |0.8750|0.     |1.0000| 48
+c49                  |1.0000|0.     |0.9380| 49
+c50                  |1.0000|0.     |0.7500| 50
+c51                  |1.0000|0.     |0.5620| 51
+c52                  |1.0000|0.     |0.3750| 52
+c53                  |1.0000|0.     |0.1880| 53
+magenta              | 1.00 | 0.50  | 1.00 | 54
+very.dark.blue       | 0.00 | 0.00  | 0.30 | 55
+white                | 0.99 | 0.99  | 0.99 | 56
+black                | 0.01 | 0.01  | 0.01 | 57
+light.brown          | 1.00 | 0.50  | 0.   | 58
+lighter.blue         | 0.75 | 0.75  | 1.00 | 59
+lighter.green        | 0.75 | 1.00  | 0.75 | 60
+lighter.orange       | 1.00 | 0.80  | 0.60 | 61
+lightest.blue        | 0.85 | 0.85  | 1.00 | 62
+lightest.gray        | 0.85 | 0.85  | 0.85 | 63
+blue.4               | 0.60 | 0.60  | 1.00 | 64
+blue.5               | 0.50 | 0.50  | 1.00 | 65
+blue.6               | 0.40 | 0.40  | 1.00 | 66
+blue.7               | 0.30 | 0.30  | 1.00 | 67
+blue.8               | 0.20 | 0.20  | 1.00 | 68
+blue.9               | 0.10 | 0.10  | 1.00 | 69
+ned.purple           | 0.66 | 0.11  | 0.82 | 70
+ned.darkpurple       | 0.44 | 0.06  | 0.44 | 71
+rblack               | 0.00 | 0.00  | 0.00 | 72
+rwhite               | 1.00 | 1.00  | 1.00 | 73
+-------------------------------------------------------------------------------
+===========================================================================
+----------------------    Plot Specification Table    ---------------------
+===========================================================================
+# 12-hr snowfall.
+# ConUS domain.
+feld=s12; ptyp=hc; hvbr=1; >
+   cbeg=0.1; cend=1.0; cint=0.1; >
+   cmth=fill; sncb; nmsg; nmin; >
+   titl=PFCST-h_Snow_Accumulation_(in); >
+   cosq=0,white,0.1,white,>
+        0.1,lightest.blue, 0.2,lightest.blue,>
+        0.2,lighter.blue,  0.5,lighter.blue,>
+        0.5,blue.5,        1.0,blue.5,>
+        1.0,transparent
+feld=s12; ptyp=hc; hvbr=1; >
+   cbeg=1.0; cend=10.0; cint=1.0;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        1.0,blue.7,         2.0,blue.7,>
+        2.0,blue,           3.0,blue,>
+        3.0,light.green,    4.0,light.green,>
+        4.0,green,          5.0,green,>
+        5.0,dark.green,     6.0,dark.green,>
+        6.0,dark.yellow,    7.0,dark.yellow,>
+        7.0,yellow,         8.0,yellow,>
+        8.0,lighter.orange, 9.0,lighter.orange,>
+        9.0,orange,        10.0,orange,>
+        10.0,transparent
+feld=s12; ptyp=hc; hvbr=1; >
+   cbeg=10.0; cend=40.0; cint=5.0;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        10.,red,            15.,red,>
+        15.,dark.red,       20.,dark.red,>
+        20.,light.red,      25.,light.red,>
+        25.,magenta,        30.,magenta,>
+        30.,ned.darkpurple, 40.,ned.darkpurple,>
+        40.,white
+feld=box; ptyp=hb; crsa=1.5,1.5; crsb=446.5,392.5
+===========================================================================

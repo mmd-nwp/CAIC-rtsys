@@ -1,0 +1,8 @@
+# Cloud cover.
+feld=cld; ptyp=hc; cmth=fill; cbeg=2.5; cint=2.5; cend=97.5; nohl; nmin; hvbr=HVBR;>
+ titl=Cloud_Cover_(%);>
+ xwin=XWIN; ywin=YWIN; >
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

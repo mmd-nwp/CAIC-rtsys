@@ -1,0 +1,42 @@
+# ---------------------------------- WARNING ----------------------------------------
+# Some of the data that you have obtained from this U.S. Geological Survey database 
+# may not have received Director's approval. Any such data values are qualified
+# as provisional and are subject to revision. Provisional data are released on the
+# condition that neither the USGS nor the United States Government may be held liable
+# for any damages resulting from its use.
+#
+# Additional info: https://waterdata.usgs.gov/provisional-data-statement/
+#
+# Contact:   gs-w_waterdata_support@usgs.gov
+# retrieved: 2026-05-25 09:30:09 EDT       (vaww01)
+#
+# Data for the following 1 site(s) are contained in this file
+#    USGS 395811105480401 DEVILS THUMB METEOROLOGICAL STATION NEAR FRASER,CO
+# -----------------------------------------------------------------------------------
+#
+# Data provided for site 395811105480401
+#            TS   parameter     Description
+#        282807       00035     Wind speed, miles per hour
+#        282808       00052     Relative humidity, percent
+#        282809       00025     Barometric pressure, millimeters of mercury
+#        282810       00020     Temperature, air, degrees Celsius
+#        282811       00036     Wind direction, degrees clockwise from true north
+#        306666       72392     Snowpack density, kilograms per cubic meter, [10 cm above soil surface]
+#        306667       72393     Liquid water content, snowpack, percent of total volume, [10 cm above soil surface]
+#        306668       72341     Water content of snow, millimeters
+#        306702       72189     Snow depth, meters
+#        306703       72185     Shortwave radiation, upward intensity, watts per square meter
+#        306772       72186     Shortwave radiation, downward intensity, watts per square meter
+#        308852       72394     Mass flux density of drifting snow particles, grams per square meter per second
+#        308853       72253     Soil temperature, degrees Celsius, [5 cm depth CS655]
+#        308854       74207     Moisture content, soil, volumetric, percent of total volume, [5 cm depth CS655]
+#        308855       72175     Longwave radiation, downward intensity, watts per square meter
+#        308856       72253     Soil temperature, degrees Celsius, [20 cm depth CS655]
+#        308857       72174     Longwave radiation, upward intensity, watts per square meter
+#        308858       74207     Moisture content, soil, volumetric, percent of total volume, [20 cm depth CS655]
+#        309045       72405     Surface temperature, non-contact, degrees Celsius
+#        320842       61728     Wind gust speed, air, miles per hour
+#
+agency_cd	site_no	datetime	tz_cd
+5s	15s	20d	6s	
+

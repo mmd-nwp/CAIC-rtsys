@@ -1,0 +1,17 @@
+DOMAIN
+feld=sshflux; ptyp=hc; cmth=fill; cint=50; hvbr=1; >
+  CORNERS
+  smth=1; cbeg=-100; cend=500;>
+  titl=Surface_Sensible_Heat_Flux_(W/m**2);>
+  nmin; nmsg;>
+  cosq=-100,def.foreground,>
+  -100,brown,0,light.brown,>
+         0,c63, 100,c66,>
+       100,c35,200,c38,>
+       200,c31,300,c34,>
+       300,c27,400,c30,>
+       400,c59,500,c62,>
+       500,def.background
+MAP
+BOX
+===========================================================================

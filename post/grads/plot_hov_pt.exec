@@ -1,0 +1,47 @@
+* ------ plot temperature Hovmoller diagram ------- *
+* &0: how many x-vectors to skip
+* &1: how many y-vectors to skip
+*set vpage 0.5  10.  1.0 8.0
+*set parea 0.05 10.8 0.5 8.5
+set xlopts 1 6 0.175
+set ylopts 1 6 0.175
+set digsize 0.15
+set cthick 8
+set xflip on
+set zlog on
+set xlint 4
+set ylint 100
+set grads off
+* -------- plot RH -------- *
+set gxout shaded
+run /home/caic/caic/rtsys/post/grads/color_wrf.gs
+set clevs 15 30 60 70 80 90 100
+*set ccols 36 37 38 39 40 41 42 43
+set ccols 36 37 0 0 40 41 42 43
+d rh
+run /home/caic/caic/rtsys/post/grads/colorbar.fiorino.f 0.95 0 5.65 0.18
+* ---------------------------
+set gxout contour
+set clskip 3
+set clab on
+set clopts -1 -1 0.18
+set cthick 8
+* ------ plot theta ------ 
+set ccolor 1
+set cstyle 1
+set cint 2
+d  (tempc+273.16)* pow((1000/lev),0.286) 
+* --------- plot 0 deg isotherm  --------
+set clab off
+set cthick 10
+set ccolor 4
+set clevs 0
+set cstyle 1
+d tempc
+* ---- draw wind barb --------
+set gxout barb
+set digsiz 0.07
+set ccolor 1
+set cthick 5
+d skip(2*u,&0,&1);2*v
+* -------------

@@ -1,0 +1,5 @@
+API web service
+
+https://wcc.sc.egov.usda.gov/awdbWebService/webservice/testwebservice.jsf?webserviceName=/awdbWebService
+
+Use getStations for a list by state

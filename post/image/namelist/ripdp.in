@@ -1,0 +1,4 @@
+ &userin
+ ptimes=FCST,ptimeunits='h',tacc=90.,discard='LANDMASK','H2SO4',
+ iexpandedout=1
+ &end

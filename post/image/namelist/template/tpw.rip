@@ -1,0 +1,15 @@
+# total preciptable water.
+feld=tpw; ptyp=hc; cmth=fill; cint=0.5; >
+  xwin=XWIN; ywin=YWIN; >
+  smth=1; hvbr=HVBR; cbeg=0.5; cend=6.00;>
+  nmin; nmsg; titl=Total_Precipitable_water_(cm);>
+  cosq=  0,c62, 1.50,c59,>
+      1.50,c30, 3.00,c27,>
+      3.00,c35, 4.50,c38,>
+      4.50,c31, 6.00,c34,>
+      6.00,def.background
+feld=tpw; ptyp=hc; linw=1; cint=0.5; colr=med.gray;>
+  smth=1; mjsk=1; nohl; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

@@ -1,0 +1,15 @@
+DOMAIN
+feld=pbllaps; ptyp=hc; cmth=fill; cint=.5; nmin; hvbr=1;>
+  CORNERS
+  smth=1; nttl; nmsg; cbeg=0.500; cend=16;>
+  cosq=0,def.background,>
+         0,c38, 4,c35,>
+         4,c34, 8,c31,>
+         8,c30,12,c27,>
+        12,c62,16,c59,>
+        16,def.background
+feld=pbllaps; ptyp=hc; linw=1; cint=2; colr=med.gray;>
+   smth=1; mjsk=0; nohl; nmsg; titl=Mixing_Height_(ft*1000)
+MAP
+BOX
+===========================================================================

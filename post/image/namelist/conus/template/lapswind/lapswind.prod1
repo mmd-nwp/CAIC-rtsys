@@ -1,0 +1,17 @@
+DOMAIN
+feld=lspd; ptyp=hc; cmth=fill; hvbr=1; cint=5; >
+  CORNERS
+  titl=Surface_Wind_Speed_(kt); >
+  smth=TDSMTH; nmsg; cbeg=15; cend=60;>
+  nmin; nmsg;>
+  cosq=10,def.background,>
+       15,c66, 30,c63,>
+       30,c30, 45,c38,>
+       45,c31, 60,c34,>
+       60,c35
+MAP
+feld=U10,V10; ptyp=hv; vcmx=-15; fulb=10kts; nttl;>
+  nmin; nmsg;>
+   linw=1; smth=0; intv=WINDCINT; colr=dark.gray; nmsg
+BOX
+===========================================================================

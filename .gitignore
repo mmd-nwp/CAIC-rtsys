@@ -1,0 +1,29 @@
+*.exe
+*.a
+*.o
+*.mod
+*.log
+*.env
+*.cdf
+*.grb2
+*.nc
+*.gb2
+*.geojson
+
+.env
+
+obs/data
+obs/images
+obs/madis/data
+post/ptfcst/terrain/*.csv
+post/image/work/model
+snowpack/nohrsc/data
+snowpack/runs/post/geom
+
+# =========================
+# PYTHON EXCLUSIONS
+# =========================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class

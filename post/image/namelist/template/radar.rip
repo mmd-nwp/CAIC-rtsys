@@ -1,0 +1,9 @@
+# Radar refl.
+feld=dbz; ptyp=hc; vcor=s; levs=b6; cmth=fill; cbeg=-30.0; cint=5.; cend=75.; nohl; nmin; hvbr=HVBR;>
+ xwin=XWIN; ywin=YWIN; >
+ titl=Reflectivity_(dBZ);>
+ cosq=-27.5,black,-22.5,lt.violet,-17.5,violet,-12.5,dk.violet,-7.5,lt.khaki,-2.5,khaki,2.5,dk.khaki,>
+7.5,lt.blue,12.5,blue,17.5,dk.blue,22.5,lt.green,27.5,green,32.5,dk.green,37.5,yellow,42.5,gold,47.5,orange,52.5,red,57.5,brick,62.5,dk.red,67.5,magenta,72.5,purple,77.5,white
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.background
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

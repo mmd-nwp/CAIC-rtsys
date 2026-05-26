@@ -1,0 +1,409 @@
+ &userin
+ title='MM5 8km Domain',
+ titlecolor='def.foreground', idotitle=1,
+ flmin=.005, frmax=.92, fbmin=.005, ftmax=.92,
+ ptimes=FCST,
+ ptimeunits='h',timezone=-7,iusdaylightrule=1,
+ tacc=600.,iinittime=0,ivalidtime=1,inearesth=1,
+ ntextq=0,ntextcd=0,fcoffset=0.0,
+ icgmsplit=0, itrajcalc=0, maxfld=15,imakev5d=0
+ &end
+-------------------------------------------------------------------------------
+                                 COLOR TABLE
+COLOR                | RED  | GREEN | BLUE | NUMBER
+-------------------------------------------------------------------------------
+def.background       | 1.00 | 1.00  | 1.00 |  0       (DEFAULT BACKGROUND)
+def.foreground       | 0.00 | 0.00  | 0.00 |  1       (DEFAULT FOREGROUND)
+lt.gray              | 0.75 | 0.75  | 0.75 |  2
+lmed.gray            | 0.65 | 0.65  | 0.65 |  3
+med.gray             | 0.50 | 0.50  | 0.50 |  4
+dk.gray              | 0.25 | 0.25  | 0.25 |  5
+lt.green             | 0.60 | 1.00  | 0.60 |  6
+green                | 0.00 | 1.00  | 0.00 |  7
+dk.green             | 0.00 | 0.50  | 0.00 |  8 
+lt.blue              | 0.50 | 0.50  | 1.00 |  9
+blue                 | 0.00 | 0.00  | 1.00 | 10
+dk.blue              | 0.00 | 0.00  | 0.50 | 11
+lt.red               | 1.00 | 0.70  | 0.70 | 12
+red                  | 1.00 | 0.00  | 0.00 | 13
+dk.red               | 0.50 | 0.00  | 0.00 | 14
+lt.orange            | 1.00 | 0.75  | 0.00 | 15
+orange               | 1.00 | 0.50  | 0.00 | 16
+dk.orange            | 1.00 | 0.25  | 0.00 | 17
+lt.violet            | 1.00 | 0.50  | 1.00 | 18
+violet               | 1.00 | 0.00  | 1.00 | 19
+dk.violet            | 0.50 | 0.00  | 0.50 | 20
+black                | 0.00 | 0.00  | 0.00 | 21
+white                | 1.00 | 1.00  | 1.00 | 22
+-------------------------------------------------------------------------------
+===========================================================================
+----------------------    Plot Specification Table    ---------------------
+===========================================================================
+# Precip type.
+# Colorado domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=181,251; ywin=169,239; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=181.5,169.5; crsb=250.5,238.5
+===========================================================================
+# Wyoming domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=168,245; ywin=221,298; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=168.5,221.5; crsb=244.5,297.5
+===========================================================================
+# Utah domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=118,195; ywin=179,256; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=118.5,179.5; crsb=194.5,255.5
+===========================================================================
+# New Mexico domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=169,249; ywin=101,181; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=169.5,101.5; crsb=248.5,180.5
+===========================================================================
+# Arizona domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=100,186; ywin=103,189; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=100.5,103.5; crsb=185.5,188.5
+===========================================================================
+# Southern California domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=35,141; ywin=133,239; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=35.5,133.5; crsb=140.5,238.5
+===========================================================================
+# Oregon domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=40,129; ywin=255,344; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=40.5,255.5; crsb=128.5,343.5
+===========================================================================
+# Washington domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=61,137; ywin=302,378; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=61.5,302.5; crsb=136.5,377.5
+===========================================================================
+# Idaho domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=108,216; ywin=248,356; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=108.5,248.5; crsb=215.5,355.5
+===========================================================================
+# South Dakota domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=220,318; ywin=222,320; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=220.5,222.5; crsb=317.5,319.5
+===========================================================================
+# Front Range domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=204,242; ywin=194,232; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=204.5,194.5; crsb=241.5,231.5
+===========================================================================
+# Western Great Basin domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=45,165; ywin=157,277; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=45.5,157.5; crsb=164.5,276.5
+===========================================================================
+# Eastern Great Basin domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=85,195; ywin=179,289; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=85.5,179.5; crsb=194.5,288.5
+===========================================================================
+# Rocky Mountain domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=145,305; ywin=159,319; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=145.5,159.5; crsb=304.5,318.5
+===========================================================================
+# Texas domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=198,356; ywin=12,170; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=def.foreground
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=198.5,12.5; crsb=355.5,169.5
+===========================================================================
+# WestUS domain.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=1;>
+   xwin=6,376; ywin=16,386; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=6.5,16.5; crsb=375.5,385.5
+===========================================================================

@@ -1,0 +1,156 @@
+ &userin
+ title='MM5 8km Domain',
+ titlecolor='def.foreground', idotitle=1,
+ flmin=.005, frmax=.92, fbmin=.005, ftmax=.92,
+ ptimes=FCST,
+ ptimeunits='h',timezone=-7,iusdaylightrule=1,
+ tacc=600.,iinittime=0,ivalidtime=1,inearesth=1,
+ ntextq=0,ntextcd=0,fcoffset=0.0,
+ icgmsplit=0, itrajcalc=0, maxfld=15,imakev5d=0
+ &end
+ &trajcalc
+ rtim=15,ctim=6,dtfile=3600.,dttraj=600.,vctraj='s',
+ xjtraj=95,90,85,80,75,70,65,80.6,80.6,80.6,80.6,80.6,80.6,
+ yitraj=50,55,60,65,70,75,80,77,77,77,77,77,77,
+ zktraj=.9,.9,.9,.9,.9,.9,.9,.99,.9,.8,.7,.6,.5,
+ ihydrometeor=0
+ &end
+-----------------------------------------------------------------
+                           COLOR TABLE
+COLOR                | RED  | GREEN | BLUE |
+-----------------------------------------------------------------
+def.background       | 1.00 | 1.00  | 1.00 |  1  (DEFAULT BACKGROUND)
+def.foreground       | 0.00 | 0.00  | 0.00 |  2  (DEFAULT FOREGROUND)
+white                | 1.00 | 1.00  | 1.00 |  3
+black                | 0.00 | 0.00  | 0.00 |  4
+cwhite               | 0.99 | 0.99  | 0.99 |  5
+cblack               | 0.01 | 0.01  | 0.01 |  6
+yellow               | 1.00 | 1.00  | 0.00 |  7
+-----------------------------------------------------------------
+===========================================================================
+----------------------    Plot Specification Table    ---------------------
+===========================================================================
+# Cloud cover.
+feld=cld; ptyp=hc; cmth=fill; cbeg=5; cint=5; cend=95; nohl; nmin;>
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=1.5,1.5; crsb=335.5,335.5
+===========================================================================
+# Wyoming domain.
+feld=cld; ptyp=hc; cmth=fill; cbeg=2.5; cint=2.5; cend=97.5; nohl; nmin;>
+ xwin=176,253; ywin=172,249; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=176.5,172.5; crsb=252.5,248.5
+===========================================================================
+# Colorado domain.
+feld=cld; ptyp=hc; cmth=fill; cbeg=2.5; cint=2.5; cend=97.5; nohl; nmin;>
+ xwin=198,266; ywin=124,192; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=198.5,124.5; crsb=265.5,191.5
+===========================================================================
+# Idaho domain.
+feld=cld; ptyp=hc; cmth=fill; cbeg=2.5; cint=2.5; cend=97.5; nohl; nmin;>
+ xwin=109,212; ywin=195,298; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=109.5,195.5; crsb=211.5,297.5
+===========================================================================
+# Great Basin GACC domain.
+feld=cld; ptyp=hc; cmth=fill; cbeg=4; cint=4; cend=96; nohl; nmin;>
+ xwin=109,208; ywin=125,260; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=109.5,125.5; crsb=207.5,259.5
+===========================================================================
+# Rocky Mountain GACC domain.
+feld=cld; ptyp=hc; cmth=fill; cbeg=4; cint=4; cend=96; nohl; nmin;>
+ xwin=157,336; ywin=116,295; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=157.5,116.5; crsb=335.5,294.5
+===========================================================================
+# Arizona domain.
+feld=cld; ptyp=hc; cmth=fill; cbeg=2.5; cint=2.5; cend=97.5; nohl; nmin;>
+ xwin=132,208; ywin=47,130; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=132.5,47.5; crsb=207.5,129.5
+===========================================================================
+# New Mexico domain.
+feld=cld; ptyp=hc; cmth=fill; cbeg=2.5; cint=2.5; cend=97.5; nohl; nmin;>
+ xwin=194,281; ywin=47,134; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=194.5,47.5; crsb=280.5,133.5
+===========================================================================
+# Front Range domain.
+feld=cld; ptyp=hc; cmth=fill; cbeg=2.5; cint=2.5; cend=97.5; nohl; nmin;>
+ xwin=219,257; ywin=148,186; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=219.5,148.5; crsb=256.5,185.5
+===========================================================================
+# California domain.
+feld=cld; ptyp=hc; cmth=fill; cbeg=5; cint=5; cend=95; nohl; nmin;>
+ xwin=39,152;ywin=62,174;>
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=39.5,62.5; crsb=151.5,173.5
+===========================================================================
+# Black Hills domain.
+feld=cld; ptyp=hc; cmth=fill; cbeg=2.5; cint=2.5; cend=97.5; nohl; nmin;>
+ xwin=223,328; ywin=187,295; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=223.5,187.5; crsb=327.5,294.5
+===========================================================================
+# Utah Domain.
+feld=cld; ptyp=hc; cmth=fill; cbeg=2.5; cint=2.5; cend=97.5; nohl; nmin; hvbr=1;>
+ xwin=136,210; ywin=125,201; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=136.5,125.5; crsb=209.5,200.5
+===========================================================================
+# Western Grand Basin.
+feld=cld; ptyp=hc; cmth=fill; cbeg=2.5; cint=2.5; cend=97.5; nohl; nmin; hvbr=1;>
+ xwin=55,185; ywin=85,215; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=55.5,85.5; crsb=184.5,214.5
+===========================================================================
+# Western South Dakota.
+feld=cld; ptyp=hc; cmth=fill; cbeg=2.5; cint=2.5; cend=97.5; nohl; nmin; hvbr=1;>
+ xwin=224,278; ywin=208,262; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L5; ouds=solid; oulw=1; cint=360; colr=yellow
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=224.5,208.5; crsb=277.5,261.5
+===========================================================================

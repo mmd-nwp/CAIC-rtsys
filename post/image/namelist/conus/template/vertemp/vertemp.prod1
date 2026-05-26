@@ -1,0 +1,15 @@
+DOMAIN
+feld=tpbiasFCST; ptyp=hc; cmth=fill; cint=1; >
+  CORNERS
+  hvbr=1; smth=5; nmsg; cbeg=-15; cend=15;>
+  nmin; nmsg;>
+  titl=30-Day_Average_Temperature_Bias_(F);>
+  cosq=-15,def.background,>
+       -15,c66, -5,c63,>
+        -5,c38,  0,c35,>
+         0,c27,  5,c30,>
+         5,c59, 15,c62,>
+        15,def.background
+MAP
+BOX
+===========================================================================

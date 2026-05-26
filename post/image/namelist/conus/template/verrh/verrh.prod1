@@ -1,0 +1,15 @@
+DOMAIN
+feld=rhbiasFCST; ptyp=hc; cmth=fill; cint=1; >
+  CORNERS
+  hvbr=1; smth=20; nmsg; cbeg=-20; cend=20;>
+  nmin; nmsg;>
+  titl=30-Day_Average_Relative_Humidity_Bias_(%);>
+  cosq=-20,def.background,>
+       -20,c66, -10,c63,>
+       -10,c38,   0,c35,>
+         0,c27,  10,c30,>
+        10,c59,  20,c62,>
+        20,def.background
+MAP
+BOX
+===========================================================================

@@ -1,0 +1,22 @@
+# Precip type.
+feld=spt; ptyp=hc; ptcb; nmin; hvbr=HVBR;>
+   xwin=XWIN; ywin=YWIN; >
+   cbeg=2; cend=15; cint=1.;>
+   cmth=fill; titl=Precipitation_type; >
+   cosq=0.5,lt.green,  1.5,lt.green,>
+        1.5,green,     2.5,green,>
+        2.5,dk.green,  3.5,dk.green,>
+        3.5,lt.orange, 4.5,lt.orange,>
+        4.5,orange,    5.5,orange,>
+        5.5,dk.orange, 6.5,dk.orange,>
+        6.5,lt.blue,   7.5,lt.blue,>
+        7.5,blue,      8.5,blue,>
+        8.5,dk.blue,   9.5,dk.blue,>
+        9.5,lt.violet,10.5,lt.violet,>
+       10.5,violet,   11.5,violet,>
+       11.5,dk.violet,12.5,dk.violet,>
+       12.5,lt.red,   15.5,red,>
+       15.6,transparent
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

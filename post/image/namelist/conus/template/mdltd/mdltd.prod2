@@ -1,0 +1,16 @@
+DOMAIN
+feld=TD2; ptyp=hc; cmth=fill; hvbr=1; cint=TDCINT; >
+  CORNERS
+  smth=TDSMTH; cbeg=0; cend=80;>
+  nmin; nmsg; titl=Surface_Dew_Point_(F)_and_Lifted_Index_(K);>
+  cosq=  0,brown,>
+         0,c62, 20,c59,>
+        20,c30, 40,c27,>
+        40,c35, 60,c38,>
+        60,c31, 80,c34,>
+        80,def.background
+feld=lif; ptyp=hc; linw=1; cint=LICINT; colr=def.foreground;>
+   smth=LISMTH; mjsk=1; nohl; nmin; nmsg; nttl; dang=11; lwzr=2
+MAP
+BOX
+===========================================================================

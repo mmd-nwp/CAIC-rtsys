@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <ns2:getStationMetadataMultipleResponse xmlns:ns2="http://www.wcc.nrcs.usda.gov/ns/awdbWebService">
+      <return>
+        <actonId>15E02S</actonId>
+        <beginDate>1979-10-01 00:00:00</beginDate>
+        <countyName>Valley</countyName>
+        <elevation>6550.00</elevation>
+        <endDate>2100-01-01 00:00:00</endDate>
+        <fipsCountryCd>US</fipsCountryCd>
+        <fipsCountyCd>085</fipsCountyCd>
+        <fipsStateNumber>16</fipsStateNumber>
+        <huc>170602080402</huc>
+        <hud>17060208</hud>
+        <latitude>44.62621</latitude>
+        <longitude>-115.79561</longitude>
+        <name>Big Creek Summit</name>
+        <shefId>BKSI1</shefId>
+        <stationDataTimeZone>-8.0</stationDataTimeZone>
+        <stationTimeZone>-7.0</stationTimeZone>
+        <stationTriplet>338:ID:SNTL</stationTriplet>
+      </return>
+      <return>
+        <actonId>15E04S</actonId>
+        <beginDate>1978-10-01 00:00:00</beginDate>
+        <countyName>Valley</countyName>
+        <elevation>6990.00</elevation>
+        <endDate>2100-01-01 00:00:00</endDate>
+        <fipsCountryCd>US</fipsCountryCd>
+        <fipsCountyCd>085</fipsCountyCd>
+        <fipsStateNumber>16</fipsStateNumber>
+        <huc>170501200401</huc>
+        <hud>17060208</hud>
+        <latitude>44.54492</latitude>
+        <longitude>-115.56386</longitude>
+        <name>Deadwood Summit</name>
+        <shefId>DDSI1</shefId>
+        <stationDataTimeZone>-8.0</stationDataTimeZone>
+        <stationTimeZone>-7.0</stationTimeZone>
+        <stationTriplet>439:ID:SNTL</stationTriplet>
+      </return>
+      <return>
+        <actonId>16E05S</actonId>
+        <beginDate>1979-10-01 00:00:00</beginDate>
+        <countyName>Adams</countyName>
+        <elevation>6240.00</elevation>
+        <endDate>2100-01-01 00:00:00</endDate>
+        <fipsCountryCd>US</fipsCountryCd>
+        <fipsCountyCd>003</fipsCountyCd>
+        <fipsStateNumber>16</fipsStateNumber>
+        <huc>170501240401</huc>
+        <hud>17050124</hud>
+        <latitude>44.77091</latitude>
+        <longitude>-116.24805</longitude>
+        <name>Puhi Flat</name>
+        <shefId>SQFI1</shefId>
+        <stationDataTimeZone>-8.0</stationDataTimeZone>
+        <stationTimeZone>-7.0</stationTimeZone>
+        <stationTriplet>782:ID:SNTL</stationTriplet>
+      </return>
+      <return>
+        <actonId>15D01S</actonId>
+        <beginDate>1979-10-01 00:00:00</beginDate>
+        <countyName>Valley</countyName>
+        <elevation>6530.00</elevation>
+        <endDate>2100-01-01 00:00:00</endDate>
+        <fipsCountryCd>US</fipsCountryCd>
+        <fipsCountyCd>085</fipsCountyCd>
+        <fipsStateNumber>16</fipsStateNumber>
+        <huc>170602080502</huc>
+        <hud>17050123</hud>
+        <latitude>45.18848</latitude>
+        <longitude>-115.97152</longitude>
+        <name>Secesh Summit</name>
+        <shefId>SCSI1</shefId>
+        <stationDataTimeZone>-8.0</stationDataTimeZone>
+        <stationTimeZone>-7.0</stationTimeZone>
+        <stationTriplet>740:ID:SNTL</stationTriplet>
+      </return>
+      <return>
+        <actonId>16D08S</actonId>
+        <beginDate>1979-10-01 00:00:00</beginDate>
+        <countyName>Adams</countyName>
+        <elevation>5590.00</elevation>
+        <endDate>2100-01-01 00:00:00</endDate>
+        <fipsCountryCd>US</fipsCountryCd>
+        <fipsCountyCd>003</fipsCountyCd>
+        <fipsStateNumber>16</fipsStateNumber>
+        <huc>170501240201</huc>
+        <hud>17050124</hud>
+        <latitude>45.07220</latitude>
+        <longitude>-116.45413</longitude>
+        <name>West Branch</name>
+        <shefId>WBRI1</shefId>
+        <stationDataTimeZone>-8.0</stationDataTimeZone>
+        <stationTimeZone>-7.0</stationTimeZone>
+        <stationTriplet>855:ID:SNTL</stationTriplet>
+      </return>
+    </ns2:getStationMetadataMultipleResponse>
+  </soap:Body>
+</soap:Envelope>

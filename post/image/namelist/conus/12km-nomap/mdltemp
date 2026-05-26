@@ -1,0 +1,96 @@
+ &userin
+ title='LABEL',
+ titlecolor='def.foreground', idotitle=1,
+ flmin=.005, frmax=.92, fbmin=.125, ftmax=.921,
+ ptimes=FCST,
+ ptimeunits='h',timezone=-7,iusdaylightrule=1,
+ tacc=600.,iinittime=0,ivalidtime=1,inearesth=1,
+ ntextq=0,ntextcd=0,fcoffset=0.0,
+ icgmsplit=0, itrajcalc=0, maxfld=15,imakev5d=0
+ &end
+-------------------------------------------------------------------------------
+                                 COLOR TABLE
+COLOR                | RED  | GREEN | BLUE | NUMBER
+-------------------------------------------------------------------------------
+def.background       | 1.00 | 1.00  | 1.00 |  0       (DEFAULT BACKGROUND)
+def.foreground       | 0.00 | 0.00  | 0.00 |  1       (DEFAULT FOREGROUND)
+light.gray           | 0.75 | 0.75  | 0.75 |  2
+lmed.gray            | 0.65 | 0.65  | 0.65 |  3
+med.gray             | 0.50 | 0.50  | 0.50 |  3
+dark.gray            | 0.25 | 0.25  | 0.25 |  4
+red                  | 1.00 | 0.00  | 0.00 |  5
+orange               | 1.00 | 0.50  | 0.00 |  6
+yellow               | 1.00 | 1.00  | 0.00 |  7
+green                | 0.00 | 1.00  | 0.00 |  8
+blue                 | 0.00 | 0.00  | 1.00 |  9
+violet               | 0.50 | 0.00  | 0.50 | 10
+light.red            | 1.00 | 0.50  | 0.50 | 11
+light.orange         | 1.00 | 0.75  | 0.50 | 12
+light.yellow         | 1.00 | 1.00  | 0.50 | 13
+light.green          | 0.50 | 1.00  | 0.50 | 14
+light.blue           | 0.50 | 0.50  | 1.00 | 15
+light.violet         | 0.75 | 0.50  | 0.75 | 16
+dark.red             | 0.50 | 0.00  | 0.00 | 17
+brown                | 0.50 | 0.25  | 0.00 | 18
+dark.yellow          | 0.50 | 0.50  | 0.00 | 19
+dark.green           | 0.00 | 0.50  | 0.00 | 20
+dark.blue            | 0.00 | 0.00  | 0.50 | 21
+c23                  | 0.40 | 0.20  | 0.00 | 23
+c26                  | 1.00 | 0.50  | 0.00 | 26
+c27                  | 1.00 | 1.00  | 0.95 | 27
+c30                  | 1.00 | 1.00  | 0.05 | 30
+c31                  | 0.95 | 1.00  | 0.95 | 31
+c34                  | 0.05 | 1.00  | 0.05 | 34
+c35                  | 0.95 | 0.95  | 1.00 | 35
+c38                  | 0.05 | 0.05  | 1.00 | 38
+c43                  |0.    |0.0620 |1.0000| 43
+c44                  |0.1250|0.     |1.0000| 44
+c45                  |0.3120|0.     |1.0000| 45
+c46                  |0.5000|0.     |1.0000| 46
+c47                  |0.6880|0.     |1.0000| 47
+c48                  |0.8750|0.     |1.0000| 48
+c49                  |1.0000|0.     |0.9380| 49
+c50                  |1.0000|0.     |0.7500| 50
+c51                  |1.0000|0.     |0.5620| 51
+c52                  |1.0000|0.     |0.3750| 52
+c53                  |1.0000|0.     |0.1880| 53
+magenta              | 1.00 | 0.50  | 1.00 | 54
+very.dark.blue       | 0.00 | 0.00  | 0.30 | 55
+black                | 0.00 | 0.00  | 0.00 | 56
+white                | 1.00 | 1.00  | 1.00 | 57
+c58                  |0.5   |0.5    |0.85  | 58
+c59                  |1.00  |0.95   |0.95  | 59
+c62                  |1.00  |0.05   |0.05  | 62
+c63                  |1.00  |0.80   |1.00  | 63
+c66                  |1.00  |0.00   |1.00  | 66
+medium.red           |0.80  |0.0    |0.0   | 67
+lighter.blue         | 0.75 | 0.94  | 1.00 | 68
+light.brown          | 1.00 |  .60  |  .40 | 69
+dark.violet          | 0.25 | 0.00  | 0.25 | 70
+medium.brown         |0.68  |0.4    |0.0   | 71
+lightest.red         | 1.00 | 0.85  | 0.85 | 72
+med.dark.gray        | 0.40 | 0.40  | 0.40 | 73
+---------------------------------------------------------------------------
+===========================================================================
+----------------------    Plot Specification Table    ---------------------
+===========================================================================
+# Temperature.
+# ConUS domain.
+feld=stp; ptyp=hc; cmth=fill; hvbr=1; cint=5;>
+  xwin=1,400; ywin=1,300; >
+  smth=10; cbeg=-30; cend=120; nmin; nmsg; >
+  titl=Surface_Temperature_(F)_and_Sea-Level_Pressure_(mb); >
+  cosq=-35,def.background,>
+       -30,c66,  0,c63,>
+         0,c38, 30,c35,>
+        30,c31, 60,c34,>
+        60,c27, 90,c30,>
+        90,c59,120,c62,>
+       120,def.background
+feld=stp; ptyp=hc; linw=1; cint=5; colr=med.gray;>
+  smth=10; mjsk=0; nmin; nmsg; nohl; nttl
+feld=stp; ptyp=hc; linw=2; cint=5; colr=blue;>
+  cbeg=32; cend=32; smth=10; mjsk=0; nohl; nolb; nmin; nmsg; nttl
+feld=msl; ptyp=hc; linw=2; cint=4; colr=def.foreground; smth=40; nmin; nmsg; nttl
+feld=box; ptyp=hb; crsa=1.5,1.5; crsb=399.5,299.5
+===========================================================================

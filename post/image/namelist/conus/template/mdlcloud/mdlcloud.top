@@ -1,0 +1,32 @@
+ &userin
+ title='MM5 8km Domain',
+ titlecolor='def.foreground', idotitle=1,
+ AREA
+ ptimes=FCST,
+ ptimeunits='h',timezone=-7,iusdaylightrule=1,
+ tacc=600.,iinittime=0,ivalidtime=1,inearesth=1,
+ ntextq=0,ntextcd=0,fcoffset=0.0,
+ icgmsplit=0, itrajcalc=0, maxfld=15,imakev5d=0
+ &end
+ &trajcalc
+ rtim=15,ctim=6,dtfile=3600.,dttraj=600.,vctraj='s',
+ xjtraj=95,90,85,80,75,70,65,80.6,80.6,80.6,80.6,80.6,80.6,
+ yitraj=50,55,60,65,70,75,80,77,77,77,77,77,77,
+ zktraj=.9,.9,.9,.9,.9,.9,.9,.99,.9,.8,.7,.6,.5,
+ ihydrometeor=0
+ &end
+-----------------------------------------------------------------
+                           COLOR TABLE
+COLOR                | RED  | GREEN | BLUE |
+-----------------------------------------------------------------
+def.background       | 1.00 | 1.00  | 1.00 |  1  (DEFAULT BACKGROUND)
+def.foreground       | 0.00 | 0.00  | 0.00 |  2  (DEFAULT FOREGROUND)
+white                | 1.00 | 1.00  | 1.00 |  3
+black                | 0.00 | 0.00  | 0.00 |  4
+cwhite               | 0.99 | 0.99  | 0.99 |  5
+cblack               | 0.01 | 0.01  | 0.01 |  6
+yellow               | 1.00 | 1.00  | 0.00 |  7
+-----------------------------------------------------------------
+===========================================================================
+----------------------    Plot Specification Table    ---------------------
+===========================================================================

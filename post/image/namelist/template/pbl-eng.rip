@@ -1,0 +1,39 @@
+# PBL height.
+feld=pbllaps; ptyp=hc; cmth=fill; cint=.5; nmin; hvbr=HVBR; >
+  xwin=XWIN; ywin=YWIN; >
+  smth=1; nttl; nmsg; cbeg=0.5; cend=12;>
+  cosq=0,def.background,>
+         0,c38, 3,c35,>
+         3,c34, 6,c31,>
+         6,c30, 9,c27,>
+         9,c62,12,c59,>
+        12,def.background
+feld=pbllaps; ptyp=hc; linw=1; cint=1; colr=med.gray;>
+  smth=1; mjsk=0; nohl; nmsg; titl=Mixing_Height_(ft*1000)
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================
+# Ventilation index and mean PBL wind. 
+feld=ven; ptyp=hc; cmth=fill; cint=5; nmin; hvbr=HVBR; >
+  xwin=XWIN; ywin=YWIN; >
+  smth=1; nttl; nmsg; cbeg=5; cend=120;>
+  cosq=  0,c62, 20,c59,>
+        20,c66, 40,c63,>
+        40,c30, 60,c27,>
+        60,c34, 80,c31,>
+        80,c38,120,c35,>
+       120,def.background
+feld=ven; ptyp=hc; linw=1; cint=10; colr=med.gray;>
+  cbeg=10; cend=30;>
+  smth=10; mjsk=0; nohl; titl=Ventilation_Index_(kt-ft*1000)_and_Mean_Mixing_Depth_Wind_(kt); nmsg
+feld=ven; ptyp=hc; linw=1; cint=20; colr=med.gray;>
+  cbeg=40; cend=80;>
+  smth=1; mjsk=0; nohl; nttl; nmsg
+feld=ven; ptyp=hc; linw=1; cint=40; colr=med.gray;>
+  cbeg=120; cend=120;>
+  smth=1; mjsk=0; nohl; nttl; nmsg
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=puw,pvw; ptyp=hv; vcmx=-5; fulb=10kts; nttl;>
+  linw=1; smth=0; intv=INTV; colr=dark.gray; nmsg
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

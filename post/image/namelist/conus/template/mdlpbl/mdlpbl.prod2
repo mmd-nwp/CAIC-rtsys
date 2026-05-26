@@ -1,0 +1,24 @@
+DOMAIN
+feld=ven; ptyp=hc; cmth=fill; cint=5; nmin; hvbr=1;>
+  CORNERS
+  smth=10; nttl; nmsg; cbeg=5; cend=120;>
+  cosq=  0,c62, 20,c59,>
+        20,c66, 40,c63,>
+        40,c30, 60,c27,>
+        60,c34, 80,c31,>
+        80,c38,120,c35,>
+       120,def.background
+feld=ven; ptyp=hc; linw=1; cint=10; colr=med.gray;>
+   cbeg=10; cend=30;>
+   smth=10; mjsk=0; nohl; titl=Ventilation_Index_(kt-ft*1000)_and_Mean_Mixing_Depth_Wind_(kt); nmsg
+feld=ven; ptyp=hc; linw=1; cint=20; colr=med.gray;>
+   cbeg=40; cend=80;>
+   smth=10; mjsk=0; nohl; nttl; nmsg
+feld=ven; ptyp=hc; linw=1; cint=40; colr=med.gray;>
+   cbeg=120; cend=120;>
+   smth=10; mjsk=0; nohl; nttl; nmsg
+MAP
+feld=puw,pvw; ptyp=hv; vcmx=-15; fulb=10kts; nttl;>
+   linw=1; smth=0; intv=WINDCINT; colr=dark.gray; nmsg
+BOX
+===========================================================================

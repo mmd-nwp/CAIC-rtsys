@@ -1,0 +1,10 @@
+DOMAIN
+feld=rhu; ptyp=hc; vcor=p; levs=500; cmth=both; nolb; nohl; cbeg=20; cint=10; cend=100; colr=dk.khaki; smth=8;>
+ CORNERS
+ hvbr=1; nmin; nmsg; titl=500_mb_Height_(dm),_Temperature_(C),_and_RH_(%);>
+ cosq=15,gold,25,yellow,55,white,65,white,105,dk.green
+feld=ght1; ptyp=hc; cbeg=468; cint=GHTCINT; nohl; linw=2; colr=def.foreground; smth=16; nmin; nmsg; nttl
+feld=tmc; ptyp=hc; nohl; cint=2.5; smth=TMCSMTH; dang=11; colr=dk.blue; linw=2; lwzr=3; nmin; nmsg; nttl; mjsk=1
+MAP
+BOX
+===========================================================================

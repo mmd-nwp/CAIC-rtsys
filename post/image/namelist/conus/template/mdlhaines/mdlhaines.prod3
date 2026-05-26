@@ -1,0 +1,17 @@
+DOMAIN
+feld=fwi; ptyp=hc; cmth=fill; hvbr=1; cint=5; >
+  CORNERS
+  smth=1; cbeg=5; cend=100;>
+  nmin; nmsg; titl=Fosberg_Fire_Weather_Index;>
+  cosq=  0,c35,   20,c38f,>
+        20,c31,   40,c34f,>
+        40,c27,   60,c30f,>
+        60,light.orange,  80,orange,>
+        80,c59,   100,c62f,>
+        100,brown
+feld=fwi; ptyp=hc; linw=1; cint=20; colr=med.gray;>
+   cbeg=20; cend=100;>
+   smth=1; mjsk=0; nohl; nmin; nmsg; nttl
+MAP
+BOX
+===========================================================================

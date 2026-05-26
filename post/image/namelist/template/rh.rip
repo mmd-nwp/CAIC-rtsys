@@ -1,0 +1,16 @@
+# low-level rh, winds at 10m 
+feld=RH2; ptyp=hc; cmth=fill; cint=CINT1; >
+  xwin=XWIN; ywin=YWIN; >
+  smth=1; hvbr=HVBR; cbeg=5; cend=95;>
+  nmin; nmsg; titl=Surface_RH_(%)_and_Wind_(ms~S~-1~N~);>
+  cosq=  0,c62, 30,c59,>
+        30,c28, 50,c27,>
+        50,c35, 70,c36,>
+        70,c31,100,c34
+feld=RH2; ptyp=hc; linw=1; cint=CINT1; colr=med.gray;>
+  smth=1; mjsk=0; nohl; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=suw,svw; ptyp=hv; vcmx=-5; fulb=5mps;>
+  linw=1; smth=0; intv=INTV; colr=dark.gray; nmsg; nmin; nmsg; nttl
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

@@ -1,0 +1,15 @@
+DOMAIN
+feld=tpw; ptyp=hc; cmth=fill; hvbr=1; cint=0.25; >
+  CORNERS
+  smth=1; cbeg=0.25; cend=3.00;>
+  nmin; nmsg; titl=Total_Precipitable_water_(in);>
+  cosq=  0,c62, 0.75,c59,>
+      0.75,c30, 1.50,c27,>
+      1.50,c35, 2.25,c38,>
+      2.25,c31, 3.00,c34,>
+      3.00,def.background
+feld=tpw; ptyp=hc; linw=1; cint=0.25; colr=med.gray;>
+   smth=1; mjsk=1; nohl; nmin; nmsg; nttl
+MAP
+BOX
+===========================================================================

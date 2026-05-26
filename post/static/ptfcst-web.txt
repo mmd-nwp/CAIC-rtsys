@@ -1,0 +1,134 @@
+02 02 FWAB        39.6324 -105.8690 A-Basin Ski Area              
+02 00 PARKRANGE   40.7270 -106.6718 Park Range                    
+02 01 CAMERONPCO  40.5100 -105.8900 Cameron Pass                  
+02 01 ELDORA      39.9490 -105.5630 Eldora Ski Area               
+02 01 BERTHPASS   39.7985 -105.7775 Berthoud Pass                 
+02 02 LVLNDPASS   39.6640 -105.8790 Loveland Pass                 
+02 02 VAIL_PASS   39.5310 -106.2170 Vail Pass                     
+02 03 INDEPPASS   39.1090 -106.5630 Independence Pass             
+02 04 R_MCLURE    39.1267 -107.2853 McClure Pass                  
+02 04 SCHOFIELD   39.0149 -107.0469 Schofield Pass                
+02 06 GRAND_MESA  39.0533 -108.0552 Grand Mesa                    
+02 07 RMP         37.8990 -107.7110 Red Mountain Pass             
+02 08 WOLFCKPASS  37.4825 -106.7983 Wolf Creek Pass               
+02 09 SANGRERNGE  38.1920 -105.7220 Sangre Range                  
+02 03 MONARCHPAS  38.4970 -106.3250 Monarch Pass                  
+02 03 COTNWDPASS  38.8280 -106.4090 Cottonwood Pass               
+02 03 BATTLEMTN   39.5246 -106.3898 Battle Mt                     
+02 10 GLENWDCAN   39.5926 -107.1840 Glenwood Canyon               
+02 10 DOUGLASPAS  39.5975 -108.8048 Douglas Pass                  
+02 07 SLUMGULPAS  37.9873 -107.2113 Slumgullion Pass              
+02 07 LIZHEADPAS  37.8111 -107.9084 Lizard Head Pass              
+02 01 TUNNELS     39.6800 -105.9200 Tunnels                       
+02 03 FREMONTPAS  39.3678 -106.1880 Fremont Pass                  
+02 03 LEADVILLE   39.2200 -106.3200 Leadville                     
+02 03 TWINLAKES   39.0683 -106.5058 Twin Lakes                    
+02 08 CUMBRESPAS  37.0200 -106.4510 Cumbres Pass                  
+02 02 BC_TOP      39.5673 -106.5076 Beaver Creek Ski Area         
+02 08 COALBANKPS  37.7036 -107.7680 Coal Bank Pass                
+02 07 GRANDTURK   37.7764 -107.6953 Grand Turk                    
+02 07 MONUMENT    37.9682 -107.6589 Monument                      
+02 05 STARPASS    38.9680 -106.7955 Star Pass                     
+02 04 TAYLORPASS  39.0203 -106.7558 Taylor Pass                   
+02 05 KEBLERPASS  38.8553 -107.1024 Kebler Pass                   
+02 04 AHIGHLANDS  39.1200 -106.8800 Aspen Highlands Ski Area      
+02 07 TELLURIDE   37.9131 -107.8216 Telluride Ski Area            
+02 05 CRESTEDBTE  38.8833 -106.9434 Crested Butte Ski Area        
+02 02 KEYSTONE    39.5792 -105.9429 Keystone Ski Area             
+02 02 BRECKENRDG  39.4706 -106.0916 Breckenridge Ski Area         
+02 02 VAILSKI     39.5988 -106.3757 Vail Ski Area                 
+02 00 STEAMBOAT   40.4503 -106.7523 Steamboat Ski Area            
+02 01 WINTERPARK  39.8760 -105.7749 Winter Park Ski Area          
+02 04 SUNLIGHT    39.4275 -107.3817 Sunlight Ski Area             
+02 08 PURGATORY   37.6184 -107.8340 Purgatory Ski Area            
+02 01 LOVELAND    39.6757 -105.9124 Loveland Ski Area             
+02 07 SILVERTON   37.8683 -107.6653 Silverton Mt Ski Area         
+02 02 COPPERMTN   39.4843 -106.1555 Copper Mt Ski Area            
+02 03 LCSAR       39.3268 -106.2530 Lake County SAR               
+02 07 PUTNEY      37.8923 -107.6958 Putney                        
+02 06 POWDERHORN  39.0647 -108.1552 Powderhorn Ski Area           
+02 05 ELKTON      38.9629 -107.0355 Elkton                        
+02 07 RIDGWAYHUT  38.0400 -107.7683 Ridgway Hut                   
+02 07 NORTHPOLE   38.0541 -107.8981 North Pole Hut                
+02 07 LDHUT       38.0064 -107.9467 Last Dollar Hut               
+02 07 BURNHUT     38.0534 -107.7342 Burn Hut                      
+02 07 BLUELAKES   38.0369 -107.8089 Blue Lakes Hut                
+02 07 STONEY      37.9825 -107.7713 Stoney
+02 07 FULLER      37.7843 -107.8330 Fuller
+02 10 FTCOLLINS   40.5500 -105.0700 Fort Collins                  
+02 10 BOULDER     40.0200 -105.2500 Boulder                       
+02 10 DENVER      39.8600 -104.6700 Denver (KDEN)                 
+02 10 AKRON       40.1600 -103.2100 Akron (KAKO)                  
+02 10 LIMON       39.2700 -103.6700 Limon (KLIC)                  
+02 10 GREELEY     40.4200 -104.7400 Greeley                       
+02 10 ESTESPARK   40.3700 -105.5200 Estes Park                    
+02 10 CONIFER     39.5200 -105.3000 Conifer                       
+02 10 MONUMENTPS  39.2200 -104.6400 Monument Pass (KMNH)          
+02 01 BEARLAKE    40.3132 -105.6483 Bear Lake RMNP                
+02 08 PAGOSASPGS  37.2895 -107.0559 Pagosa Springs (KPSO)         
+02 08 PASSCKYURT  37.4717 -106.7465 Pass Creek Yurt
+02 05 CSIRWIN     38.8909 -107.1002 Irwin Guides
+02 10 ARVADA      39.8061 -105.0606 Arvada
+02 00 FARWELL     40.8324 -106.8526 Farwell
+02 00 MTWERNER    40.4561 -106.7399 Mt Werner
+02 00 MOSQLAKES   39.9944 -107.1520 Mosquito Lakes (Flat Tops)
+02 04 CHAIRMT     39.0580 -107.2821 Chair Mt
+02 04 REDTABLEMT  39.4442 -106.9028 Red Table Mt
+02 05 WESTELKPK   38.7181 -107.1993 West Elk Pk
+02 05 FAIRVIEWPK  38.6833 -106.5367 Fairview Pk
+02 06 SKYWAYPT    39.0457 -108.0669 Skyway Point
+02 09 BUSHNELLPK  38.3414 -105.8894 Bushnell Pk
+02 09 RITOALTOPK  38.1028 -105.6616 Rito Alto Pk
+02 09 BLANCAPK    37.5772 -105.4858 Blanca Pk
+02 06 SPRUCEMT    39.1972 -107.5224 Spruce Mt
+02 06 HORSEMT     39.0800 -107.9332 Horse Mt
+02 10 TAOSSP      36.5768 -105.4547 Taos Ski Area
+02 07 LAKECITY    38.0286 -107.3156 Lake City
+02 05 CBNORDIC    38.8699 -106.9893 CB Nordic Center
+02 01 PIKESPEAK   38.8405 -105.0442 Pikes Peak
+02 10 COLLBRAN    39.2300 -107.9800 Collbran
+02 10 CEDAREDGE   38.9100 -107.9400 Cedaredge
+02 04 CHARLESPK   39.4628 -106.6352 Charles Peak
+02 06 NMAMMPK     39.3866 -107.8660 North Mamm Peak
+02 04 MACEPEAK    38.9984 -106.8286 Mace Peak
+02 04 MTNAST      39.2511 -106.6117 Mt Nast
+02 03 GALENAMT    39.3150 -106.4322 Galena Mt
+02 04 RASPRIDGE   39.0385 -107.1935 Raspberry Ridge
+02 10 CASTLEPK    39.7750 -106.8458 Castle Pk
+02 04 MTSOPRIS    39.2610 -107.1648 Mt Sopris
+02 07 RICO        37.6947 -108.0316 Rico
+02 10 STERLING    40.6212 -103.1730 Sterling
+02 10 LASTCHANCE  39.7400 -103.5935 Last Chance
+02 10 PAWNEE      40.8323 -103.6889 Pawnee Natl Grassland/Raymer
+02 10 WELLINGTON  40.7040 -104.9975 Wellington
+02 10 BRIGGSDALE  40.6397 -104.3326 Briggsdale
+02 10 FORTMORGAN  40.0802 -104.8197 Fort Morgan
+02 10 HENDERSON   39.8854 -104.8819 Henderson
+02 10 BENNETT     39.7559 -104.4274 Bennett
+02 10 CALHAN      39.0360 -104.2936 Calhan
+02 10 PUEBLO      38.3076 -104.6137 Pueblo
+02 10 WALSENBURG  37.6317 -104.7684 Walsenburg
+02 10 TRINIDAD    37.1343 -104.5213 Trinidad
+02 10 ORDWAY      38.2146 -103.7482 Ordway
+02 10 THATCHER    37.5472 -104.1048 Thatcher
+02 10 BRANSON     37.0160 -103.8857 Branson
+02 10 PRITCHETT   37.2764 -103.3555 Pritchett
+02 10 LAJUNTA     38.0000 -103.5314 La Junta
+02 10 LAMAR       38.0635 -102.6172 Lamar
+02 10 KITCARSON   38.7644 -102.7952 Kit Carson
+02 10 PUNKIN      38.8520 -103.7005 Punkin Center
+02 05 GOTHIC      38.9587 -106.9890 Gothic
+02 05 FRIENDSHUT  38.9639 -106.8111 Friends Hut
+02 05 PARKCONE    38.8167 -106.5833 Park Cone
+02 04 SNOWMASS    39.1729 -106.9491 Snowmass Ski Area
+02 10 BLUECKCAN   38.4083 -107.4078 Blue Creek Canyon
+02 08 COLUMBUSBA  37.4400 -108.0200 Columbus Basin
+02 10 GREENMTNWY  41.1319 -106.9083 Green Mtn WY
+02 07 SYDNEYBASN  37.9737 -107.7683 Sydney Basin
+02 07 RICHMNDBAS  37.9553 -107.7179 Richmond Basin
+02 08 VALLECITO   37.4851 -107.5068 Vallecito SNOTEL
+02 08 MIDDLECRK   37.6167 -107.0333 Middle Creek SNOTEL
+02 07 MOLASPASS   37.7514 -107.6911 Molas Pass
+02 04 ASPENMTSA   39.1500 -106.8167 Aspen Mtn Ski Area
+02 07 MTABRAMS    37.9633 -107.6472 Mt Abrams
+02 04 SPRINGGLCH  39.3604 -107.3008 Spring Gulch

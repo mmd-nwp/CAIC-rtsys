@@ -1,0 +1,67 @@
+# Upper air.
+feld=avo; ptyp=hc; vcor=p; levs=500; cmth=fill; nolb; nohl; cbeg=0; cend=30; cint=1; smth=2; hvbr=HVBR;>
+ xwin=XWIN; ywin=YWIN; >
+ nmin; nmsg; titl=500_mb_Height_(dm)_and_Absolute_Vorticity_(s~S~-1~N~);>
+ cosq=-1.5,b9,1.5,b10,4.5,def.background,7.5,def.background,10.5,b15,13.5,b18,16.5,b21,19.5,b23,22.5,b24,25.5,b25,28.5,b26,31.5,b28
+feld=ght1; ptyp=hc; cint=1; nohl; linw=2; colr=def.foreground; smth=8; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================
+feld=wsp; ptyp=hc; vcor=p; levs=500; cmth=both; nohl; cbeg=15; cend=90; cint=5; smth=4; colr=dk.red; hvbr=HVBR;>
+ xwin=XWIN; ywin=YWIN; >
+ nmin; nmsg; titl=500_mb_Height_(dm)_and_Wind_(ms~S~-1~N~);>
+ cosq=12.5,def.background,17.5,b23,22.5,b24,27.5,b25,32.5,b26,37.5,b27,42.5,b28,47.5,b29,55,b30,62.5,b31,70,tan,85,brown,100,def.foreground
+feld=uuu,vvv; ptyp=hv; vcmx=-1; fulb=5mps; smth=1; intv=INTV; colr=dk.gray; nmin; nmsg; nttl
+feld=ght1; ptyp=hc; cint=1; nohl; linw=2; colr=def.foreground; smth=8; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================
+feld=rhu; ptyp=hc; vcor=p; levs=500; cmth=both; nolb; nohl; cbeg=20; cint=10; cend=100; colr=dk.khaki; smth=1; hvbr=HVBR;>
+ xwin=XWIN; ywin=YWIN; >
+ nmin; nmsg; titl=500_mb_Height_(dm),_Temperature_(C),_and_RH_(%);>
+ cosq=15,gold,25,yellow,55,white,65,white,105,dk.green
+feld=ght1; ptyp=hc; cint=1; nohl; linw=2; colr=def.foreground; smth=4; nmin; nmsg; nttl
+feld=tmc; ptyp=hc; nohl; cint=2.5; smth=4; dang=11; colr=dk.blue; linw=2; lwzr=3; nmin; nmsg; nttl; mjsk=1
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================
+feld=wsp; ptyp=hc; vcor=p; levs=700; cmth=both; nohl; cbeg=10; cend=70; cint=5; smth=4; colr=dk.red; hvbr=HVBR;>
+ xwin=XWIN; ywin=YWIN; >
+ nmin; nmsg; titl=700_mb_Height_(dm)_and_Wind_(ms~S~-1~N~);>
+ cosq=12.5,def.background,17.5,b23,22.5,b24,27.5,b25,32.5,b26,37.5,b27,42.5,b28,47.5,b29,55,b30,62.5,b31,70,tan,85,brown,100,def.foreground
+feld=uuu,vvv; ptyp=hv; vcmx=-1; fulb=5mps; smth=1; intv=INTV; colr=dk.gray; nmin; nmsg; nttl
+feld=ght1; ptyp=hc; cint=1; nohl; linw=2; colr=def.foreground; smth=8; nmin; nmsg; nttl; hide
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================
+feld=rhu; ptyp=hc; vcor=p; levs=700; cmth=both; nolb; nohl; cbeg=20; cint=10; cend=100; colr=dk.khaki; smth=1; hvbr=HVBR;>
+ xwin=XWIN; ywin=YWIN; >
+ nmin; nmsg; titl=700_mb_Height_(dm),_Temperature_(C),_and_RH_(%);>
+ cosq=15,gold,25,yellow,55,white,65,white,105,dk.green
+feld=ght1; ptyp=hc; cint=1; nohl; linw=2; colr=def.foreground; smth=8; nmin; nmsg; nttl; hide
+feld=tmc; ptyp=hc; nohl; cint=2.5; smth=4; dang=11; colr=dk.red; cong=dk.blue; cozr=dk.blue; linw=2; lwzr=3; nmin; nmsg; nttl; mjsk=1
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray; nmin; nmsg; nttl
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================
+feld=wsp; ptyp=hc; vcor=p; levs=150; cmth=both; nohl; cbeg=30; cend=90; cint=5; smth=4; colr=dk.red; hvbr=HVBR;>
+ xwin=XWIN; ywin=YWIN; >
+ nmin; nmsg; titl=300_mb_Height_(dm)_and_Wind_(ms~S~-1~N~);>
+ cosq=12.5,def.background,17.5,b23,22.5,b24,27.5,b25,32.5,b26,37.5,b27,42.5,b28,47.5,b29,55,b30,62.5,b31,70,tan,85,brown,100,def.foreground
+feld=uuu,vvv; ptyp=hv; vcmx=-1; fulb=5mps; smth=1; intv=INTV; colr=dk.gray; nmin; nmsg; nttl
+feld=ght1; ptyp=hc; cbeg=900; cint=3; nohl; linw=2; colr=def.foreground; smth=8; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================
+feld=www; ptyp=hc; vcor=p; levs=700; cmth=both; nohl; cbeg=-40; cend=40; cint=5; smth=4; colr=dk.red; hvbr=HVBR;>
+ xwin=XWIN; ywin=YWIN; >
+ nmin; nmsg; titl=700_mb_Vertical_Motion_(cm_s~S~-1~N~)_and_Wind_(ms~S~-1~N~);>
+  cosq=-45,def.background,>
+       -40,c62,-20,c59,>
+       -20,c30,  0,c27,>
+         0,c35, 20,c38,>
+        20,c31, 40,c34,>
+        40,def.background
+feld=uuu,vvv; ptyp=hv; vcmx=-1; fulb=5mps; smth=1; intv=INTV; colr=dk.gray; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

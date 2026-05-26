@@ -1,0 +1,40 @@
+# Snow accumulation.
+feld=acc; ptyp=hc; hvbr=HVBR;>
+   xwin=XWIN; ywin=YWIN; >
+   cbeg=0.1; cend=1.0; cint=0.1;>
+   cmth=fill; titl=Total_Snow_Accumulation_(in)_and_Surface_Wind_(kt); sncb; >
+   cosq=0,white,0.1,white,>
+        0.1,lightest.blue, 0.2,lightest.blue,>
+        0.2,lighter.blue,  0.5,lighter.blue,>
+        0.5,blue.5,        1.0,blue.5,>
+        1.0,transparent
+feld=acc; ptyp=hc; >
+   cbeg=1.0; cend=10.0; cint=1.0;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        1.0,blue.7,         2.0,blue.7,>
+        2.0,blue,           3.0,blue,>
+        3.0,light.green,    4.0,light.green,>
+        4.0,green,          5.0,green,>
+        5.0,dark.green,     6.0,dark.green,>
+        6.0,dark.yellow,    7.0,dark.yellow,>
+        7.0,yellow,         8.0,yellow,>
+        8.0,lighter.orange, 9.0,lighter.orange,>
+        9.0,orange,        10.0,orange,>
+        10.0,transparent
+feld=acc; ptyp=hc; >
+   cbeg=10.0; cend=40.0; cint=5.0;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        10.,red,       15.,red,>
+        15.,dark.red,  20.,dark.red,>
+        20.,light.red, 25.,light.red,>
+        25.,magenta,   30.,magenta,>
+        30.,violet,    40.,violet,>
+        40.,transparent
+feld=suw,svw; ptyp=hv; vcmx=-5; fulb=10kts; nmsg;>
+   linw=1; smth=0; intv=INTV; colr=med.gray;>
+   nttl; nmin
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

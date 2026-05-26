@@ -1,0 +1,14 @@
+DOMAIN
+feld=www; ptyp=hc; vcor=p; levs=700; cmth=both; nohl; cbeg=-40; cend=40; cint=5; smth=16; colr=dk.red;>
+ CORNERS
+ hvbr=1; nmin; nmsg; titl=700_mb_Vertical_Motion_(cm_s~S~-1~N~)_and_Wind_(kt);>
+  cosq=-45,def.background,>
+       -40,c62,-20,c59,>
+       -20,c30,  0,c27,>
+         0,c35, 20,c38,>
+        20,c31, 40,c34,>
+        40,def.background
+feld=uuu,vvv; ptyp=hv; vcmx=-1; fulb=10kts; smth=1; intv=WINDCINT; colr=dk.gray; nmin; nmsg; nttl
+MAP
+BOX
+===========================================================================

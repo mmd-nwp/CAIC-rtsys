@@ -1,0 +1,17 @@
+# low-level wind-speed, winds at 10m 
+feld=lspd; ptyp=hc; cmth=fill; cint=2.5; >
+  xwin=XWIN; ywin=YWIN; >
+  titl=Surface_Wind_Speed_(kt); >
+  smth=1; nmsg; cbeg=15; cend=60;>
+  nmin; nmsg;>
+  cosq=10,def.background,>
+       15,c66, 30,c63,>
+       30,c30, 45,c38,>
+       45,c31, 60,c34,>
+       60,c35
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=suw,svw; ptyp=hv; vcmx=-15; fulb=10kts; nttl;>
+  nmin; nmsg;>
+   linw=1; smth=0; intv=INTV; colr=dark.gray; nmsg
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

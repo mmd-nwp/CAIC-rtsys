@@ -1,0 +1,173 @@
+ &userin
+ title='MM5 8km Domain',
+ titlecolor='def.foreground', idotitle=1,
+ flmin=.005, frmax=.92, fbmin=.12, ftmax=1.00,
+ ptimes=FCST,
+ ptimeunits='h',timezone=-7,iusdaylightrule=1,
+ tacc=600.,iinittime=0,ivalidtime=1,inearesth=1,
+ ntextq=0,ntextcd=0,fcoffset=0.0,
+ icgmsplit=0, itrajcalc=0, maxfld=15,imakev5d=0
+ &end
+-----------------------------------------------------------------
+                           COLOR TABLE
+COLOR                | RED  | GREEN | BLUE |
+-----------------------------------------------------------------
+def.background       | 1.00 | 1.00  | 1.00 |  0 (DEFAULT BACKGROUND)
+def.foreground       | 0.00 | 0.00  | 0.00 |  1 (DEFAULT FOREGROUND)
+white                | 0.99 | 0.99  | 0.99 |  2
+purple               | 0.60 | 0.20  | 0.80 |  3
+magenta              | 1.00 | 0.00  | 1.00 |  4
+dk.red               | 0.60 | 0.00  | 0.00 |  5
+brick                | 0.80 | 0.20  | 0.00 |  6
+red                  | 1.00 | 0.00  | 0.00 |  7
+orange               | 1.00 | 0.40  | 0.00 |  8
+gold                 | 1.00 | 0.80  | 0.00 |  9
+yellow               | 1.00 | 1.00  | 0.00 | 10
+dk.green             | 0.00 | 0.60  | 0.00 | 11
+green                | 0.00 | 0.80  | 0.00 | 12
+lt.green             | 0.00 | 1.00  | 0.00 | 13
+dk.blue              | 0.00 | 0.00  | 1.00 | 14
+blue                 | 0.20 | 0.60  | 1.00 | 15
+lt.blue              | 0.40 | 1.00  | 1.00 | 16
+dk.khaki             | 0.40 | 0.40  | 0.20 | 17
+khaki                | 0.60 | 0.60  | 0.40 | 18
+lt.khaki             | 0.80 | 0.80  | 0.60 | 19
+dk.violet            | 0.40 | 0.20  | 0.40 | 20
+violet               | 0.60 | 0.40  | 0.60 | 21
+lt.violet            | 0.80 | 0.60  | 0.80 | 22
+cyan                 | 0.00 | 1.00  | 1.00 | 23
+black                | 0.00 | 0.00  | 0.00 | 24
+tan                  | 0.80 | 0.40  | 0.00 | 25
+brown                | 0.40 | 0.20  | 0.00 | 26
+dk.gray              | 0.20 | 0.20  | 0.20 | 27
+gray                 | 0.40 | 0.40  | 0.40 | 28
+lt.gray              | 0.80 | 0.80  | 0.80 | 29
+b2                   | 1.0  | 0.0   | 0.8  | 30
+b3                   | 1.0  | 0.0   | 1.0  | 31
+b4                   | 0.8  | 0.0   | 1.0  | 32
+b5                   | 0.6  | 0.0   | 1.0  | 33
+b6                   | 0.4  | 0.0   | 1.0  | 34
+b7                   | 0.2  | 0.0   | 1.0  | 35
+b8                   | 0.0  | 0.0   | 1.0  | 36
+b9                   | 0.0  | 0.2   | 1.0  | 37
+b10                  | 0.0  | 0.4   | 1.0  | 38
+b11                  | 0.0  | 0.6   | 1.0  | 39
+b12                  | 0.0  | 0.8   | 1.0  | 40
+b13                  | 0.0  | 1.0   | 1.0  | 41
+b14                  | 0.0  | 1.0   | 0.8  | 42
+b15                  | 0.0  | 1.0   | 0.6  | 43
+b16                  | 0.0  | 1.0   | 0.4  | 44
+b17                  | 0.0  | 1.0   | 0.2  | 45
+b18                  | 0.0  | 1.0   | 0.0  | 46
+b19                  | 0.2  | 1.0   | 0.0  | 47
+b20                  | 0.4  | 1.0   | 0.0  | 48
+b21                  | 0.6  | 1.0   | 0.0  | 49
+b22                  | 0.8  | 1.0   | 0.0  | 50
+b23                  | 1.0  | 1.0   | 0.0  | 51
+b24                  | 1.0  | 0.8   | 0.0  | 52
+b25                  | 1.0  | 0.6   | 0.0  | 53
+b26                  | 1.0  | 0.4   | 0.0  | 54
+b27                  | 1.0  | 0.2   | 0.0  | 55
+b28                  | 1.0  | 0.0   | 0.0  | 56
+b29                  | 1.0  | 0.0   | 0.2  | 57
+b30                  | 1.0  | 0.0   | 0.4  | 58
+b31                  | 1.0  | 0.0   | 0.6  | 59
+b32                  | 0.8  | 0.8   | 0.8  | 60
+b33                  | 0.7  | 0.7   | 0.7  | 61
+b34                  | 0.6  | 0.6   | 0.6  | 62
+b35                  | 0.4  | 0.4   | 0.4  | 63
+b36                  | 0.2  | 0.2   | 0.2  | 64
+light.gray           | 0.80 | 0.80  | 0.80 | 65
+med.dark.gray        | 0.40 | 0.40  | 0.40 | 66
+c59                  |1.00  |0.95   |0.95  | 67
+c62                  |1.00  |0.05   |0.05  | 68
+c27                  | 1.00 | 1.00  | 0.95 | 69
+c30                  | 1.00 | 1.00  | 0.05 | 70
+c31                  | 0.95 | 1.00  | 0.95 | 71
+c34                  | 0.05 | 1.00  | 0.05 | 72
+c35                  | 0.95 | 0.95  | 1.00 | 73
+c38                  | 0.05 | 0.05  | 1.00 | 74
+-----------------------------------------------------------------
+===========================================================================
+----------------------    Plot Specification Table    ---------------------
+===========================================================================
+# 500 mb height and absolute vorticity.
+# Southwest domain.
+feld=avo; ptyp=hc; vcor=p; levs=500; cmth=fill; nolb; nohl; cbeg=0; cend=30; cint=3; smth=8;>
+ xwin=92,267; ywin=75,215; >
+ hvbr=1; nmin; nmsg; titl=500_mb_Height_(dm)_and_Absolute_Vorticity_(s~S~-1~N~);>
+ cosq=-1.5,b9,1.5,b10,4.5,def.background,7.5,def.background,10.5,b15,13.5,b18,16.5,b21,19.5,b23,22.5,b24,25.5,b25,28.5,b26,31.5,b28
+feld=ght1; ptyp=hc; cbeg=468; cint=3; nohl; linw=2; colr=def.foreground; smth=16; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=92.5,75.5; crsb=266.5,214.5
+===========================================================================
+# 500 mb height and wind.
+# Southwest domain.
+feld=wspk; ptyp=hc; vcor=p; levs=500; cmth=both; nohl; cbeg=30; cend=180; cint=10; smth=8; colr=dk.red;>
+ xwin=92,267; ywin=75,215; >
+ hvbr=1; nmin; nmsg; titl=500_mb_Height_(dm)_and_Wind_(kt);>
+ cosq=27.5,def.background,37.5,b23,47.5,b24,57.5,b25,67.5,b26,77.5,b27,87.5,b28,97.5,b29,112.5,b30,127.5,b31,142.5,tan,172.5,brown,202.5,def.foreground
+feld=uuu,vvv; ptyp=hv; vcmx=-1; fulb=10kts; smth=1; intv=4; colr=dk.gray; nmin; nmsg; nttl
+feld=ght1; ptyp=hc; cbeg=468; cint=3; nohl; linw=2; colr=def.foreground; smth=16; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=92.0,75.0; crsb=267.0,215.0
+===========================================================================
+# 500 mb height, temperature, and RH.
+# Southwest domain.
+feld=rh; ptyp=hc; vcor=p; levs=500; cmth=both; nolb; nohl; cbeg=20; cint=10; cend=100; colr=dk.khaki; smth=8;>
+ xwin=92,267; ywin=75,215; >
+ hvbr=1; nmin; nmsg; titl=500_mb_Height_(dm),_Temperature_(C),_and_RH_(%);>
+ cosq=15,gold,25,yellow,55,white,65,white,105,dk.green
+feld=ght1; ptyp=hc; cbeg=468; cint=3; nohl; linw=2; colr=def.foreground; smth=16; nmin; nmsg; nttl
+feld=tmc; ptyp=hc; nohl; cint=2.5; smth=8; dang=11; colr=dk.blue; linw=2; lwzr=3; nmin; nmsg; nttl; mjsk=1
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=92.5,75.5; crsb=266.5,214.5
+===========================================================================
+# 700 mb height and wind.
+# Southwest domain.
+feld=wspk; ptyp=hc; vcor=p; levs=700; cmth=both; nohl; cbeg=10; cend=140; cint=10; smth=8; colr=dk.red;>
+ xwin=92,267; ywin=75,215; >
+ hvbr=1; nmin; nmsg; titl=700_mb_Height_(dm)_and_Wind_(kt);>
+ cosq=7.5,def.background,12.5,lt.khaki,17.5,khaki,22.5,dk.khaki,37.5,b23,47.5,b24,57.5,b25,67.5,b26,77.5,b27,87.5,b28,97.5,b29,112.5,b30,127.5,b31,142.5,tan,172.5,brown,202.5,def.foreground
+feld=uuu,vvv; ptyp=hv; vcmx=-1; fulb=10kts; smth=1; intv=4; colr=dk.gray; nmin; nmsg; nttl
+feld=ght1; ptyp=hc; cbeg=210; cint=2; nohl; linw=2; colr=def.foreground; smth=16; nmin; nmsg; nttl; hide
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=92.0,75.0; crsb=267.0,215.0
+===========================================================================
+# 700 mb height, temperature, and RH.
+# Southwest domain.
+feld=rh; ptyp=hc; vcor=p; levs=700; cmth=both; nolb; nohl; cbeg=20; cint=10; cend=100; colr=dk.khaki; smth=4;>
+ xwin=92,267; ywin=75,215; >
+ hvbr=1; nmin; nmsg; titl=700_mb_Height_(dm),_Temperature_(C),_and_RH_(%);>
+ cosq=15,gold,25,yellow,55,white,65,white,105,dk.green
+feld=ght1; ptyp=hc; cbeg=210; cint=2; nohl; linw=2; colr=def.foreground; smth=16; nmin; nmsg; nttl; hide
+feld=tmc; ptyp=hc; nohl; cint=2.5; smth=8; dang=11; colr=dk.red; cong=dk.blue; cozr=dk.blue; linw=2; lwzr=3; nmin; nmsg; nttl; mjsk=1
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=92.5,75.5; crsb=266.5,214.5
+===========================================================================
+# 300 mb height and wind.
+# Southwest domain.
+feld=wspk; ptyp=hc; vcor=p; levs=300; cmth=both; nohl; cbeg=30; cend=180; cint=10; smth=8; colr=dk.red;>
+ xwin=92,267; ywin=75,215; >
+ hvbr=1; nmin; nmsg; titl=300_mb_Height_(dm)_and_Wind_(kt);>
+ cosq=27.5,def.background,37.5,b23,47.5,b24,57.5,b25,67.5,b26,77.5,b27,87.5,b28,97.5,b29,112.5,b30,127.5,b31,142.5,tan,172.5,brown,202.5,def.foreground
+feld=uuu,vvv; ptyp=hv; vcmx=-1; fulb=10kts; smth=1; intv=4; colr=dk.gray; nmin; nmsg; nttl
+feld=ght1; ptyp=hc; cbeg=468; cint=3; nohl; linw=2; colr=def.foreground; smth=16; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=92.0,75.0; crsb=267.0,215.0
+===========================================================================
+# 700 mb vertical motion and wind.
+# Southwest domain.
+feld=lww; ptyp=hc; vcor=p; levs=700; cmth=both; nohl; cbeg=-40; cend=40; cint=5; smth=8; colr=dk.red;>
+ xwin=92,267; ywin=75,215; >
+ hvbr=1; nmin; nmsg; titl=700_mb_Vertical_Motion_(cm_s~S~-1~N~)_and_Wind_(kt);>
+  cosq=-45,def.background,>
+       -40,c62,-20,c59,>
+       -20,c30,  0,c27,>
+         0,c35, 20,c38,>
+        20,c31, 40,c34,>
+        40,def.background
+feld=uuu,vvv; ptyp=hv; vcmx=-1; fulb=10kts; smth=1; intv=4; colr=dk.gray; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.dark.gray
+feld=box; ptyp=hb; crsa=92.5,75.5; crsb=266.5,214.5
+===========================================================================

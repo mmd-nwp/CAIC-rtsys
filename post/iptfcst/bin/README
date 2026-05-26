@@ -1,0 +1,1 @@
+python3.12 build_zarr.py --input "/model/caic/2km/wrf/260960600/wrfout_d02_*"  --output "/data/models/wrf2km_latest.zarr"

@@ -1,0 +1,32 @@
+* ------ plot temperature Hovmoller diagram ------- *
+*set vpage 0.5  10.  1.0 8.0
+*set parea 0.05 10.8 0.5 8.5
+set xlopts 1 6 0.175
+set ylopts 1 6 0.175
+set digsize 0.15
+set cthick 8
+set xflip on
+set zlog on
+set xlint 4
+set ylint 100
+set grads off
+* -------- plot RH -------- *
+set gxout shaded
+run /home/caic/caic/rtsys/post/grads/rgbset.gs
+set clevs -32 -16 -8 -4 -2 -1 -0.5 -0.1 0 0.1 0.5 1 2 4 8 16 32
+*set ccols 41 42 43 44 45 46 47 48 0 0 21 22 23 24 25 26 27 28
+set ccols 28 27 26 25 24 23 22 21 0 0 41 42 43 44 45 46 47 48
+d omega
+run /home/caic/caic/rtsys/post/grads/colorbar.fiorino.f 0.95 0 5.65 0.18
+* ---------------------------
+set gxout contour
+set clskip 2
+set clab on
+set clopts -1 -1 0.18
+set cthick 8
+* --------- plot thetae --------
+set ccolor 1
+set cint 2
+set cstyle 1
+d thetae
+* -------------

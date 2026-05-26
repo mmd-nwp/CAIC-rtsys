@@ -1,0 +1,10 @@
+DOMAIN
+feld=wspk; ptyp=hc; vcor=p; levs=300; cmth=both; nohl; cbeg=30; cend=180; cint=10; smth=8; colr=dk.red;>
+ CORNERS
+ hvbr=1; nmin; nmsg; titl=300_mb_Height_(dm)_and_Wind_(kt);>
+ cosq=27.5,def.background,37.5,b23,47.5,b24,57.5,b25,67.5,b26,77.5,b27,87.5,b28,97.5,b29,112.5,b30,127.5,b31,142.5,tan,172.5,brown,202.5,def.foreground
+feld=uuu,vvv; ptyp=hv; vcmx=-1; fulb=10kts; smth=8; intv=WINDCINT; colr=dk.gray; nmin; nmsg; nttl
+feld=ght1; ptyp=hc; cbeg=468; cint=GHTCINT; nohl; linw=2; colr=def.foreground; smth=16; nmin; nmsg; nttl
+MAP
+BOX
+===========================================================================

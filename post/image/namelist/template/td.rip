@@ -1,0 +1,34 @@
+# low-level td, winds at 10m 
+feld=TD2; ptyp=hc; cmth=fill; cint=CINT1; >
+  xwin=XWIN; ywin=YWIN; >
+  smth=1; hvbr=HVBR; cbeg=-15; cend=25;>
+  nmin; nmsg; titl=Surface_Dew_Point_(C)_and_Wind_(ms~S~-1~N~);>
+  cosq=-15,brown,>
+       -15,c62, -5,c59,>
+        -5,c30,  5,c27,>
+         5,c31, 15,c34,>
+        15,c35, 25,c38,>
+        25,def.background
+feld=TD2; ptyp=hc; linw=1; cint=CINT1; colr=med.gray;>
+  smth=1; mjsk=1; nohl; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=suw,svw; ptyp=hv; vcmx=-5; fulb=5mps;>
+  linw=1; smth=0; intv=INTV; colr=dark.gray; nmsg; nmin; nmsg; nttl
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================
+# Surface dew point and LI. 
+feld=TD2; ptyp=hc; cmth=fill; cint=CINT2; >
+  xwin=XWIN; ywin=YWIN; >
+  smth=1; hvbr=HVBR; cbeg=-15; cend=25;>
+  nmin; nmsg; titl=Surface_Dew_Point_(C)_and_Lifted_Index_(K);>
+  cosq=-15,brown,>
+       -15,c62, -5,c59,>
+        -5,c30,  5,c27,>
+         5,c31, 15,c34,>
+        15,c35, 25,c38,>
+        25,def.background
+feld=lif; ptyp=hc; linw=1; cint=CINT2; colr=def.foreground;>
+   smth=1; mjsk=1; nohl; nmin; nmsg; nttl; dang=11; lwzr=2
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=med.gray
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

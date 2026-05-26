@@ -1,0 +1,22 @@
+# low-level temp, winds at 10m 
+feld=stp; ptyp=hc; cmth=fill; cint=CINT1; >
+  xwin=XWIN; ywin=YWIN; >
+  smth=1; hvbr=HVBR; cbeg=-30; cend=45;>
+  nmin; nmsg; titl=Surface_Temperature_(C)_and_Wind_(ms~S~-1~N~);>
+  cosq=-35,def.background,>
+       -30,c66, -15,c63,>
+       -15,c38,   0,c35,>
+         0,c31,  15,c34,>
+        15,c27,  30,c30,>
+        30,c59,  45,c62,>
+        45,def.background
+feld=stp; ptyp=hc; linw=1; cint=CINT1; colr=med.gray;>
+  smth=1; mjsk=0; nohl; nmin; nmsg; nttl
+feld=stp; ptyp=hc; linw=2; cint=CINT1; colr=blue;>
+  cbeg=0; cend=0;>
+  smth=1; mjsk=0; nohl; nolb; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=suw,svw; ptyp=hv; vcmx=-5; fulb=5mps;>
+  linw=1; smth=0; intv=INTV; colr=dark.gray; nmsg; nmin; nmsg; nttl
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

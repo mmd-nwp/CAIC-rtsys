@@ -1,0 +1,21 @@
+DOMAIN
+feld=mtp; ptyp=hc; cmth=fill; hvbr=1; cint=TPCINT;>
+  CORNERS
+  smth=TPSMTH; cbeg=-30; cend=120; nmin; nmsg; >
+  MTITL
+  cosq=-35,def.background,>
+       -30,c66,  0,c63,>
+         0,c38, 30,c35,>
+        30,c31, 60,c34,>
+        60,c27, 90,c30,>
+        90,c59,120,c62,>
+       120,def.background
+feld=mtp; ptyp=hc; linw=1; cint=TPCINT; colr=med.gray;>
+  smth=TPSMTH; mjsk=0; nmin; nmsg; nohl; nttl
+feld=mtp; ptyp=hc; linw=2; cint=2; colr=blue;>
+  cbeg=32; cend=32; smth=TPSMTH; mjsk=0; nohl; nolb; nmin; nmsg; nttl
+MAPSLPR
+feld=suw,svw; ptyp=hv; vcmx=-15; fulb=10kts; nttl;>
+  nmin; linw=1; smth=0; intv=WINDCINT; colr=dark.gray; nmsg
+BOX
+===========================================================================

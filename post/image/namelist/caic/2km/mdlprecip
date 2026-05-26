@@ -1,0 +1,290 @@
+ &userin
+ title='LABEL',
+ titlecolor='def.foreground', idotitle=1,
+ flmin=.005, frmax=.92, fbmin=.005, ftmax=.92,
+ ptimes=FCST,
+ ptimeunits='h',timezone=-7,iusdaylightrule=1,
+ tacc=600.,iinittime=0,ivalidtime=1,inearesth=1,
+ ntextq=0,ntextcd=0,fcoffset=0.0,
+ icgmsplit=0, itrajcalc=0, maxfld=15,imakev5d=0
+ &end
+-------------------------------------------------------------------------------
+                                 COLOR TABLE
+COLOR                | RED  | GREEN | BLUE | NUMBER
+-------------------------------------------------------------------------------
+def.background       | 1.00 | 1.00  | 1.00 |  0       (DEFAULT BACKGROUND)
+def.foreground       | 0.00 | 0.00  | 0.00 |  1       (DEFAULT FOREGROUND)
+c1                   | 0.85 | 0.85  | 1.00 |  2
+c2                   | 0.75 | 0.75  | 1.00 |  3
+c5                   | 0.50 | 0.50  | 1.00 |  4
+c10                  | 0.30 | 0.30  | 1.00 |  5
+c20                  | 0.00 | 0.00  | 1.00 |  6
+c30                  | 0.75 | 1.00  | 0.75 |  7
+c40                  | 0.00 | 1.00  | 0.00 |  8
+c50                  | 0.00 | 0.50  | 0.00 |  9
+c60                  | 0.75 | 0.75  | 0.00 | 10
+c70                  | 1.00 | 1.00  | 0.00 | 11
+c80                  | 1.00 | 0.80  | 0.60 | 12
+c90                  | 1.00 | 0.50  | 0.00 | 13
+c100                 | 1.00 | 0.00  | 0.00 | 14
+c150                 | 0.50 | 0.00  | 0.00 | 15
+c200                 | 1.00 | 0.50  | 0.50 | 16
+c250                 | 1.00 | 0.50  | 1.00 | 17
+c300                 | 0.50 | 0.00  | 0.50 | 18
+white                | 0.99 | 0.99  | 0.99 | 19
+-------------------------------------------------------------------------------
+===========================================================================
+----------------------    Plot Specification Table    ---------------------
+===========================================================================
+# Accumulated precipitation.
+# 2km domain.
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; hvbr=1; nmsg; nmin; >
+   smth=1; cbeg=1; cend=10; cint=1;>
+   cmth=fill; titl=Total_Precipitation_(in); prcb; >
+   cosq=0,white,1,white,>
+        1,c1, 2,c1,>
+        2,c2, 5,c2,>
+        5,c5, 10,c5,>
+        10,transparent
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; >
+   cbeg=0; cend=100; cint=10;>
+   smth=1; cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        10,c10, 20,c10,>
+        20,c20, 30,c20,>
+        30,c30, 40,c30,>
+        40,c40, 50,c40,>
+        50,c50, 60,c50,>
+        60,c60, 70,c60,>
+        70,c70, 80,c70,>
+        80,c80, 90,c80,>
+        90,c90, 100,c90,>
+        100,transparent
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; >
+   smth=1; cbeg=50; cend=450; cint=50;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        100,c100, 150,c100,>
+        150,c150, 200,c150,>
+        200,c200, 250,c200,>
+        250,c250, 300,c250,>
+        300,c300, 400,c300,>
+        400,white
+feld=box; ptyp=hb; crsa=1.5,1.5; crsb=372.5,363.5
+===========================================================================
+# Steamboat domain.
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; hvbr=1; nmsg; nmin; >
+   xwin=128,208; ywin=211,291; >
+   smth=1; cbeg=1; cend=10; cint=1;>
+   cmth=fill; titl=Total_Precipitation_(in); prcb; >
+   cosq=0,white,1,white,>
+        1,c1, 2,c1,>
+        2,c2, 5,c2,>
+        5,c5, 10,c5,>
+        10,transparent
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; >
+   cbeg=0; cend=100; cint=10;>
+   smth=1; cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        10,c10, 20,c10,>
+        20,c20, 30,c20,>
+        30,c30, 40,c30,>
+        40,c40, 50,c40,>
+        50,c50, 60,c50,>
+        60,c60, 70,c60,>
+        70,c70, 80,c70,>
+        80,c80, 90,c80,>
+        90,c90, 100,c90,>
+        100,transparent
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; >
+   smth=1; cbeg=50; cend=450; cint=50;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        100,c100, 150,c100,>
+        150,c150, 200,c150,>
+        200,c200, 250,c200,>
+        250,c250, 300,c250,>
+        300,c300, 400,c300,>
+        400,white
+feld=box; ptyp=hb; crsa=128.5,210.5; crsb=208.5,290.5
+===========================================================================
+# Front Range domain.
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; hvbr=1; nmsg; nmin; >
+   xwin=178,278; ywin=189,289; >
+   smth=1; cbeg=1; cend=10; cint=1;>
+   cmth=fill; titl=Total_Precipitation_(in); prcb; >
+   cosq=0,white,1,white,>
+        1,c1, 2,c1,>
+        2,c2, 5,c2,>
+        5,c5, 10,c5,>
+        10,transparent
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; >
+   cbeg=0; cend=100; cint=10;>
+   smth=1; cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        10,c10, 20,c10,>
+        20,c20, 30,c20,>
+        30,c30, 40,c30,>
+        40,c40, 50,c40,>
+        50,c50, 60,c50,>
+        60,c60, 70,c60,>
+        70,c70, 80,c70,>
+        80,c80, 90,c80,>
+        90,c90, 100,c90,>
+        100,transparent
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; >
+   smth=1; cbeg=50; cend=450; cint=50;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        100,c100, 150,c100,>
+        150,c150, 200,c150,>
+        200,c200, 250,c200,>
+        250,c250, 300,c250,>
+        300,c300, 400,c300,>
+        400,white
+feld=box; ptyp=hb; crsa=178.5,189.5; crsb=277.5,288.5
+===========================================================================
+# Vail-Summit domain.
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; hvbr=1; nmsg; nmin; >
+   xwin=148,228; ywin=177,257; >
+   smth=1; cbeg=1; cend=10; cint=1;>
+   cmth=fill; titl=Total_Precipitation_(in); prcb; >
+   cosq=0,white,1,white,>
+        1,c1, 2,c1,>
+        2,c2, 5,c2,>
+        5,c5, 10,c5,>
+        10,transparent
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; >
+   cbeg=0; cend=100; cint=10;>
+   smth=1; cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        10,c10, 20,c10,>
+        20,c20, 30,c20,>
+        30,c30, 40,c30,>
+        40,c40, 50,c40,>
+        50,c50, 60,c50,>
+        60,c60, 70,c60,>
+        70,c70, 80,c70,>
+        80,c80, 90,c80,>
+        90,c90, 100,c90,>
+        100,transparent
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; >
+   smth=1; cbeg=50; cend=450; cint=50;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        100,c100, 150,c100,>
+        150,c150, 200,c150,>
+        200,c200, 250,c200,>
+        250,c250, 300,c250,>
+        300,c300, 400,c300,>
+        400,white
+feld=box; ptyp=hb; crsa=148.5,177.5; crsb=227.5,256.5
+===========================================================================
+# Central Mtns domain.
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; hvbr=1; nmsg; nmin; >
+   xwin=112,212; ywin=141,241; >
+   smth=1; cbeg=1; cend=10; cint=1;>
+   cmth=fill; titl=Total_Precipitation_(in); prcb; >
+   cosq=0,white,1,white,>
+        1,c1, 2,c1,>
+        2,c2, 5,c2,>
+        5,c5, 10,c5,>
+        10,transparent
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; >
+   cbeg=0; cend=100; cint=10;>
+   smth=1; cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        10,c10, 20,c10,>
+        20,c20, 30,c20,>
+        30,c30, 40,c30,>
+        40,c40, 50,c40,>
+        50,c50, 60,c50,>
+        60,c60, 70,c60,>
+        70,c70, 80,c70,>
+        80,c80, 90,c80,>
+        90,c90, 100,c90,>
+        100,transparent
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; >
+   smth=1; cbeg=50; cend=450; cint=50;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        100,c100, 150,c100,>
+        150,c150, 200,c150,>
+        200,c200, 250,c200,>
+        250,c250, 300,c250,>
+        300,c300, 400,c300,>
+        400,white
+feld=box; ptyp=hb; crsa=112.5,140.5; crsb=212.5,240.5
+===========================================================================
+# San Juan domain.
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; hvbr=1; nmsg; nmin; >
+   xwin=109,209; ywin=66,166; >
+   smth=1; cbeg=1; cend=10; cint=1;>
+   cmth=fill; titl=Total_Precipitation_(in); prcb; >
+   cosq=0,white,1,white,>
+        1,c1, 2,c1,>
+        2,c2, 5,c2,>
+        5,c5, 10,c5,>
+        10,transparent
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; >
+   cbeg=0; cend=100; cint=10;>
+   smth=1; cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        10,c10, 20,c10,>
+        20,c20, 30,c20,>
+        30,c30, 40,c30,>
+        40,c40, 50,c40,>
+        50,c50, 60,c50,>
+        60,c60, 70,c60,>
+        70,c70, 80,c70,>
+        80,c80, 90,c80,>
+        90,c90, 100,c90,>
+        100,transparent
+feld=rexpsh0; ptyp=hc; addf=3.937; nttl
+feld=rexpsh0; ptyp=hc; addf=-1; save=rexpsh0in; nttl
+feld=rexpsh0in; ptyp=hc; >
+   smth=1; cbeg=50; cend=450; cint=50;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        100,c100, 150,c100,>
+        150,c150, 200,c150,>
+        200,c200, 250,c200,>
+        250,c250, 300,c250,>
+        300,c300, 400,c300,>
+        400,white
+feld=box; ptyp=hb; crsa=109.5,66.5; crsb=208.5,165.5
+===========================================================================

@@ -1,0 +1,48 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>Aspen Mountain 24-Hour Wx Summary: 8-20-2024 (Most recent data at bottom)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META HTTP-EQUIV="refresh" CONTENT="300">
+<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="expires" CONTENT="Fri, 1 Jan 1999 00:00:01 MST">
+</HEAD>
+<BODY>
+<H2 ALIGN="LEFT">Aspen Mountain 24-Hour Wx Summary: 8-20-2024 (Most recent data at bottom)</H2>
+<HR>
+<PRE>
+
+
+                   AMTop   AMTop   AMTop   AMTop   AMTop  AMWind  AMWind  AMWind  AMWind   AMMid   AMMid   AMMid   AMMid   AMMid
+                  MinTmp  MaxTmp  RelHum NewSnow BasSnow AvgWind MaxWind WindDir    Baro  MinTmp  MaxTmp  RelHum NewSnow BasSnow
+    Date    Time      F.      F.       %     in.     in.     MPH     MPH    Deg.  in. Hg      F.      F.       %     in.     in.
+--------------------------------------------------------------------------------------------------------------------------------
+                                                               3       8     WSW   30.50      60      68      43       0       0
+                                                               4       9     WSW   30.50      65      69      45       0       8
+                                                               6      14       W   30.49      66      69      46       0       8
+                                                               6      15     WNW   30.49      63      69      52       0       8
+                                                               6      13      NW   30.49      62      67      40       0       0
+                                                               4      10     NNW   30.49      64      67      50       0       7
+                                                               4       9     WNW   30.48      62      64      47       0       7
+                                                               4      10       W   30.49      59      63      54       0       6
+                                                               6      13      SW   30.49      58      60      53       0       6
+                                                               6      13     WSW   30.51      56      59      54       0       6
+                                                               5      10     WSW   30.51      55      56      59       0       6
+                                                               3       7       S   30.51      55      56      59       0       6
+                                                               3       5     SSE   30.50      53      57      61       0       6
+                                                               4       5       S   30.50      52      53      66       0       6
+                                                               3       4     SSW   30.50      51      52      68       0       6
+                                                               3       5     SSW   30.49      52      53      63       0       6
+                                                               5       8     SSW   30.49      52      53      65       0       6
+                                                               6       8     WSW   30.49      52      52      64       0       6
+                                                               6       8      SW   30.50      52      54      60       0       6
+                                                               4       7      SW   30.51      54      57      54       0       6
+                                                               3       5       W   30.52      57      59      55       0       5
+                                                               3       8     NNW   30.52      59      62      48       0       5
+                                                               4       8     NNW   30.52      62      65      37       0       8
+                                                               4       9     NNW   30.52      65      68      33       0       8
+                                                               3       9      NW   30.51      66      72      35       0       8
+</PRE>
+</BODY>
+</HTML>

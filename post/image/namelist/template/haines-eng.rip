@@ -1,0 +1,43 @@
+# Haines index
+feld=ham; ptyp=hc; cmth=fill; cint=1; >
+  xwin=XWIN; ywin=YWIN; >
+  smth=1; hvbr=HVBR; cbeg=3; cend=6;>
+  nmin; nmsg; titl=Haines_Index_(850-700mb);>
+  cosq=            3,c38,>
+         3,c34,    4,c34,>
+         4,c30,    5,c30,>
+         5,c66,    6,c66,>
+         6,c62
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================
+# Haines index
+feld=hah; ptyp=hc; cmth=fill; cint=1; >
+  xwin=XWIN; ywin=YWIN; >
+  smth=1; hvbr=HVBR; cbeg=3; cend=6;>
+  nmin; nmsg; titl=Haines_Index_(700-500mb);>
+  cosq=            3,c38,>
+         3,c34,    4,c34,>
+         4,c30,    5,c30,>
+         5,c66,    6,c66,>
+         6,c62
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================
+# Fosberg index
+feld=fwi; ptyp=hc; cmth=fill; cint=5; >
+  xwin=XWIN; ywin=YWIN; >
+  smth=1; hvbr=HVBR; cbeg=5; cend=100;>
+  nmin; nmsg; titl=Fosberg_Fire_Weather_Index;>
+  cosq=  0,c35,   20,c38f,>
+        20,c31,   40,c34f,>
+        40,c27,   60,c30f,>
+        60,light.orange,  80,orange,>
+        80,c59,   100,c62f,>
+        100,brown
+feld=fwi; ptyp=hc; linw=1; cint=20; colr=med.gray;>
+   cbeg=20; cend=100;>
+   smth=1; mjsk=0; nohl; nmin; nmsg; nttl
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

@@ -1,0 +1,16 @@
+DOMAIN
+feld=RH2; ptyp=hc; cmth=fill; cint=10; hvbr=1;>
+  CORNERS
+  smth=RHSMTH; cbeg=RHBEG; cend=RHEND;>
+  nmin; nmsg; titl=Surface_RH_(%)_and_Wind_(kt);>
+  cosq=  0,c62, 30,c59,>
+        30,c28, 50,c27,>
+        50,c35, 70,c36,>
+        70,c31,100,c34
+feld=RH2; ptyp=hc; linw=1; cint=RHCINT; colr=med.gray;>
+   smth=RHSMTH; mjsk=0; nohl; nmin; nmsg; nttl
+MAP
+feld=suw,svw; ptyp=hv; vcmx=-15; fulb=10kts;>
+   linw=1; smth=0; intv=WINDCINT; colr=dark.gray; nmin; nmsg; nttl
+BOX
+===========================================================================

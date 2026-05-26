@@ -1,0 +1,144 @@
+FWAB        39.6324 -105.8690 3517 A-Basin Ski Area
+PARKRANGE   40.7270 -106.6718 -999 Park Range                                   
+CAMERONPCO  40.5100 -105.8900 -999 Cameron Pass                                 
+ELDORA      39.9490 -105.5630 -999 Eldora Ski Area                              
+BERTHPASS   39.7985 -105.7775 -999 Berthoud Pass                                
+LVLNDPASS   39.6637 -105.8788 -999 Loveland Pass                                
+VAIL_PASS   39.5310 -106.2170 -999 Vail Pass                                    
+INDEPPASS   39.1085 -106.5876 -999 Independence Pass                            
+R_MCLURE    39.1267 -107.2853 -999 McClure Pass                                 
+SCHOFIELD   39.0149 -107.0469 -999 Schofield Pass                               
+GRAND_MESA  39.0533 -108.0552 -999 Grand Mesa                                   
+RMP         37.8990 -107.7110 -999 Red Mountain Pass                            
+WOLFCKPASS  37.4827 -106.8021 -999 Wolf Creek Pass                              
+SANGRERNGE  38.1920 -105.7220 -999 Sangre Range                                 
+MONARCHPAS  38.4970 -106.3250 -999 Monarch Pass                                 
+COTNWDPASS  38.8280 -106.4090 -999 Cottonwood Pass                              
+BATTLEMTN   39.5246 -106.3898 -999 Battle Mt                                    
+GLENWDCAN   39.5926 -107.1840 -999 Glenwood Canyon                              
+DOUGLASPAS  39.5973 -108.8112 -999 Douglas Pass                                 
+SLUMGULPAS  37.9899 -107.2500 -999 Slumgullion Pass                             
+LIZHEADPAS  37.8111 -107.9084 -999 Lizard Head Pass                             
+TUNNELS     39.6800 -105.9200 -999 Tunnels                                      
+FREMONTPAS  39.3678 -106.1880 -999 Fremont Pass                                 
+LEADVILLE   39.2200 -106.3200 -999 Leadville                                    
+TWINLAKES   39.0683 -106.5058 -999 Twin Lakes                                   
+CUMBRESPAS  37.0213 -106.4466 -999 Cumbres Pass                                
+BC_TOP      39.5673 -106.5076 -999 Beaver Creek Ski Area                        
+COALBANKPS  37.7036 -107.7680 3414 Coal Bank Pass
+GRANDTURK   37.7764 -107.6953 3993 Grand Turk
+MONUMENT    37.9682 -107.6589 2891 Monument
+STARPASS    38.9680 -106.7955 -999 Star Pass
+TAYLORPASS  39.0203 -106.7558 -999 Taylor Pass
+KEBLERPASS  38.8553 -107.1024 -999 Kebler Pass
+AHIGHLANDS  39.1200 -106.8800 -999 Aspen Highlands Ski Area
+HIGHLANDPK  39.1286 -106.8771 -999 Highlands Peak
+TELLURIDE   37.9131 -107.8216 -999 Telluride Ski Area
+CRESTEDBTE  38.8833 -106.9434 -999 Crested Butte Ski Area
+KEYSTONE    39.5792 -105.9429 -999 Keystone Ski Area
+BRECKENRDG  39.4727 -106.1026 -999 Breckenridge Ski Area
+VAILSKI     39.5988 -106.3757 -999 Vail Ski Area
+STEAMBOAT   40.4503 -106.7523 -999 Steamboat Ski Area
+WINTERPARK  39.8760 -105.7749 -999 Winter Park Ski Area
+SUNLIGHT    39.4275 -107.3817 -999 Sunlight Ski Area
+PURGATORY   37.6184 -107.8340 -999 Purgatory Ski Area
+LOVELAND    39.6757 -105.9124 -999 Loveland Ski Area
+SILVERTON   37.8683 -107.6653 -999 Silverton Mt Ski Area
+COPPERMTN   39.4843 -106.1555 -999 Copper Mt Ski Area
+LCSAR       39.3268 -106.2530 -999 Lake County SAR
+PUTNEY      37.8923 -107.6958 3756 Putney
+POWDERHORN  39.0647 -108.1552 2592 Powderhorn Ski Area
+ELKTON      38.9629 -107.0355 3007 Elkton
+RIDGWAYHUT  38.0400 -107.7683 3124 Ridgway Hut
+NORTHPOLE   38.0541 -107.8981 3036 North Pole Hut
+LDHUT       38.0064 -107.9467 3330 Last Dollar Hut
+BURNHUT     38.0534 -107.7342 3023 Burn Hut
+BLUELAKES   38.0369 -107.8089 2874 Blue Lakes Hut
+STONEY      37.9825 -107.7713 3871 Stoney
+FULLER      37.7843 -107.8330 4050 Fuller
+FTCOLLINS   40.5500 -105.0700 -999 Fort Collins
+BOULDER     40.0200 -105.2500 -999 Boulder
+DENVER      39.8600 -104.6700 -999 Denver (KDEN)
+AKRON       40.1600 -103.2100 -999 Akron (KAKO)
+LIMON       39.2700 -103.6700 -999 Limon (KLIC)
+GREELEY     40.4200 -104.7400 -999 Greeley
+ESTESPARK   40.3700 -105.5200 -999 Estes Park
+CONIFER     39.5200 -105.3000 -999 Conifer
+MONUMENTPS  39.2200 -104.6400 -999 Monument Pass (KMNH)
+BEARLAKE    40.3132 -105.6483 2890 Bear Lake RMNP
+PAGOSASPGS  37.2895 -107.0559 2336 Pagosa Springs (KPSO)
+PASSCKYURT  37.4717 -106.7465 3134 Pass Creek Yurt
+CSIRWIN     38.8909 -107.1002 3632 Irwin Guides
+ARVADA      39.8061 -105.0606 1623 Arvada
+FARWELL     40.8324 -106.8526 -999 Farwell
+MTWERNER    40.4561 -106.7399 -999 Mt Werner
+MOSQLAKES   39.9944 -107.1520 -999 Mosquito Lakes (Flat Tops)
+CHAIRMT     39.0580 -107.2821 -999 Chair Mt
+REDTABLEMT  39.4442 -106.9028 3580 Red Table Mt
+WESTELKPK   38.7181 -107.1993 -999 West Elk Pk
+FAIRVIEWPK  38.6833 -106.5367 -999 Fairview Pk
+SKYWAYPT    39.0457 -108.0669 -999 Skyway Point
+BUSHNELLPK  38.3414 -105.8894 -999 Bushnell Pk
+RITOALTOPK  38.1028 -105.6616 -999 Rito Alto Pk
+BLANCAPK    37.5772 -105.4858 -999 Blanca Pk
+SPRUCEMT    39.1972 -107.5224 -999 Spruce Mt
+HORSEMT     39.0800 -107.9332 -999 Horse Mt
+TAOSSP      36.5768 -105.4547 -999 Taos Ski Area
+LAKECITY    38.0286 -107.3156 -999 Lake City
+CBNORDIC    38.8699 -106.9893 -999 CB Nordic Center
+PIKESPEAK   38.8405 -105.0442 -999 Pikes Peak
+COLLBRAN    39.2300 -107.9800 1829 Collbran
+CEDAREDGE   38.9100 -107.9400 1963 Cedaredge
+CHARLESPK   39.4628 -106.6352 -999 Charles Peak
+NMAMMPK     39.3866 -107.8660 -999 North Mamm Peak
+MACEPEAK    38.9984 -106.8286 -999 Mace Peak
+MTNAST      39.2511 -106.6117 -999 Mt Nast
+GALENAMT    39.3150 -106.4322 -999 Galena Mt
+RASPRIDGE   39.0385 -107.1935 -999 Raspberry Ridge
+CASTLEPK    39.7750 -106.8458 3361 Castle Pk
+MTSOPRIS    39.2610 -107.1648 -999 Mt Sopris
+RICO        37.6947 -108.0316 2682 Rico
+STERLING    40.6212 -103.1730 -999 Sterling
+WRAY        40.0791 -102.2275 -999 Wray
+JULESBURG   40.9918 -102.2528 -999 Julesburg
+BURLINGTON  39.3013 -102.2549 -999 Burlington
+LASTCHANCE  39.7400 -103.5935 -999 Last Chance
+PAWNEE      40.8323 -103.6889 -999 Pawnee Natl Grassland/Raymer
+WELLINGTON  40.7040 -104.9975 -999 Wellington
+BRIGGSDALE  40.6397 -104.3326 -999 Briggsdale
+FORTMORGAN  40.0802 -104.8197 -999 Fort Morgan
+HENDERSON   39.8854 -104.8819 -999 Henderson
+BENNETT     39.7559 -104.4274 -999 Bennett
+CALHAN      39.0360 -104.2936 -999 Calhan
+PUEBLO      38.3076 -104.6137 -999 Pueblo
+WALSENBURG  37.6317 -104.7684 -999 Walsenburg
+TRINIDAD    37.1343 -104.5213 -999 Trinidad
+ORDWAY      38.2146 -103.7482 -999 Ordway
+THATCHER    37.5472 -104.1048 -999 Thatcher
+BRANSON     37.0160 -103.8857 -999 Branson
+PRITCHETT   37.2764 -103.3555 -999 Pritchett
+LAJUNTA     38.0000 -103.5314 -999 La Junta
+LAMAR       38.0635 -102.6172 -999 Lamar
+KITCARSON   38.7644 -102.7952 -999 Kit Carson
+PUNKIN      38.8520 -103.7005 -999 Punkin Center
+ARAPAHOE    38.8498 -102.1777 -999 Arapahoe
+TOWNER      38.4714 -102.0810 -999 Towner
+CAMPO       37.0981 -102.5791 -999 Campo
+GOTHIC      38.9587 -106.9890 2896 Gothic
+FRIENDSHUT  38.9639 -106.8111 3490 Friends Hut
+PARKCONE    38.8167 -106.5833 2926 Park Cone
+SNOWMASS    39.1729 -106.9491 -999 Snowmass Ski Area
+BLUECKCAN   38.4083 -107.4078 -999 Blue Creek Canyon
+COLUMBUSBA  37.4400 -108.0200 3287 Columbus Basin
+GREENMTNWY  41.1319 -106.9083 -999 Green Mtn WY
+SYDNEYBASN  37.9737 -107.7683 3658 Sydney Basin
+RICHMNDBAS  37.9553 -107.7179 3414 Richmond Basin
+VALLECITO   37.4851 -107.5068 3316 Vallecito SNOTEL
+MIDDLECRK   37.6167 -107.0333 3429 Middle Creek SNOTEL
+MOLASPASS   37.7514 -107.6911 3292 Molas Pass
+ASPENMTSA   39.1500 -106.8167 3402 Aspen Mtn Ski Area
+MTABRAMS    37.9609 -107.6412 3609 Mt Abrams
+SHCHATEAU   39.2629 -106.9803 2593 Shield O Chateau
+LASALS      38.4653 -109.2645 -999 La Sals
+MANTISKY    39.3023 -111.4538 -999 Manti Skyline
+WESTUNITAS  40.6793 -110.9488 -999 Western Uintas

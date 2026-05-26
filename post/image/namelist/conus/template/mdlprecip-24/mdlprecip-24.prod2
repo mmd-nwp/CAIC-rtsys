@@ -1,0 +1,41 @@
+DOMAIN
+feld=r48; ptyp=hc; hvbr=1; >
+   CORNERS
+   smth=PCPSMTH; cbeg=1; cend=10; cint=1;>
+   cmth=fill; ppcb; >
+   titl=PFC48-h_Precipitation_(in)_and_Surface_Wind_(kt); >
+   cosq=0,white,1,white,>
+        1,lightest.blue,2,lightest.blue,>
+        2,lighter.blue,5,lighter.blue,>
+        5,blue.5,10,blue.5,>
+        10,transparent
+feld=r48; ptyp=hc; hvbr=1; >
+   smth=PCPSMTH; cbeg=10; cend=100; cint=10;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        10,blue.7,20,blue.7,>
+        20,blue,30,blue,>
+        30,light.green,40,light.green,>
+        40,green,50,green,>
+        50,dark.green,60,dark.green,>
+        60,dark.yellow,70,dark.yellow,>
+        70,yellow,80,yellow,>
+        80,lighter.orange,90,lighter.orange,>
+        90,orange,100,orange,>
+        100,transparent
+feld=r48; ptyp=hc; hvbr=1; >
+   smth=PCPSMTH; cbeg=100; cend=400; cint=50;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        100,red,150,red,>
+        150,dark.red,200,dark.red,>
+        200,light.red,250,light.red,>
+        250,magenta,300,magenta,>
+        300,ned.purple,400,ned.purple,>
+        400,ned.darkpurple
+feld=suw,svw; ptyp=hv; vcmx=-15; fulb=10kts; nmsg;>
+   linw=1; smth=0; intv=WINDCINT; colr=med.gray;>
+   nttl; nmin
+MAP
+BOX
+===========================================================================

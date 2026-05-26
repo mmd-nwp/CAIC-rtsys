@@ -1,0 +1,75 @@
+# ---------------------------------- WARNING ----------------------------------------
+# Some of the data that you have obtained from this U.S. Geological Survey database 
+# may not have received Director's approval. Any such data values are qualified
+# as provisional and are subject to revision. Provisional data are released on the
+# condition that neither the USGS nor the United States Government may be held liable
+# for any damages resulting from its use.
+#
+# Additional info: https://waterdata.usgs.gov/provisional-data-statement/
+#
+# Contact:   gs-w_waterdata_support@usgs.gov
+# retrieved: 2026-05-25 09:30:15 EDT       (vaww02)
+#
+# Data for the following 1 site(s) are contained in this file
+#    USGS 390447107175001 CHAIR MOUNTAIN METEOROLOGICAL STATION, CO
+# -----------------------------------------------------------------------------------
+#
+# Data provided for site 390447107175001
+#            TS   parameter     Description
+#        317449       72186     Shortwave radiation, downward intensity, watts per square meter
+#        317451       72253     Soil temperature, degrees Celsius, [5 cm depth CS655]
+#        317452       74207     Moisture content, soil, volumetric, percent of total volume, [5 cm depth CS655]
+#        317453       00020     Temperature, air, degrees Celsius
+#        317454       00025     Barometric pressure, millimeters of mercury
+#        317456       72185     Shortwave radiation, upward intensity, watts per square meter
+#        317457       72394     Mass flux density of drifting snow particles, grams per square meter per second
+#        317459       72174     Longwave radiation, upward intensity, watts per square meter
+#        317460       00036     Wind direction, degrees clockwise from true north
+#        317462       00052     Relative humidity, percent
+#        317464       72341     Water content of snow, millimeters
+#        317466       72253     Soil temperature, degrees Celsius, [20 cm depth CS655]
+#        317469       72189     Snow depth, meters
+#        317472       74207     Moisture content, soil, volumetric, percent of total volume, [20 cm depth CS655]
+#        317474       72175     Longwave radiation, downward intensity, watts per square meter
+#        317475       72393     Liquid water content, snowpack, percent of total volume, [10 cm above soil surface]
+#        317476       72392     Snowpack density, kilograms per cubic meter, [10 cm above soil surface]
+#        317478       72405     Surface temperature, non-contact, degrees Celsius
+#        317479       00035     Wind speed, miles per hour
+#
+# Data-value qualification codes included in this output:
+#        
+#     P  Provisional data subject to revision.
+# 
+agency_cd	site_no	datetime	tz_cd	317449_72186	317449_72186_cd	317451_72253	317451_72253_cd	317452_74207	317452_74207_cd	317453_00020	317453_00020_cd	317454_00025	317454_00025_cd	317456_72185	317456_72185_cd	317457_72394	317457_72394_cd	317459_72174	317459_72174_cd	317460_00036	317460_00036_cd	317462_00052	317462_00052_cd	317464_72341	317464_72341_cd	317466_72253	317466_72253_cd	317469_72189	317469_72189_cd	317472_74207	317472_74207_cd	317474_72175	317474_72175_cd	317475_72393	317475_72393_cd	317476_72392	317476_72392_cd	317478_72405	317478_72405_cd	317479_00035	317479_00035_cd
+5s	15s	20d	6s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s	14n	10s
+USGS	390447107175001	2026-05-24 00:00	MDT	-2.30	P			26.3	P	7.2	P	526	P	0.00	P	1311	P	334	P	228	P	39.6	P	9.7	P	8.5	P			28.5	P	260	P			0.33	P	2.0	P	0.3	P
+USGS	390447107175001	2026-05-24 01:00	MDT	-2.40	P			26.2	P	7.1	P	526	P	0.00	P	1311	P	333	P	231	P	40.9	P	9.6	P	8.3	P			28.5	P	260	P			0.00	P	1.7	P	0.7	P
+USGS	390447107175001	2026-05-24 02:00	MDT	-2.20	P			26.2	P	6.8	P	525	P	0.00	P	1311	P	332	P	224	P	41.9	P	9.7	P	8.2	P			28.5	P	259	P			0.00	P	1.4	P	0.4	P
+USGS	390447107175001	2026-05-24 03:00	MDT	-2.30	P			26.1	P	6.8	P	525	P	0.00	P	1311	P	331	P	231	P	42.5	P	9.7	P	8.0	P			28.4	P	259	P			0.00	P	1.1	P	0.3	P
+USGS	390447107175001	2026-05-24 04:00	MDT	-2.30	P			26.1	P	6.8	P	525	P	0.00	P	1311	P	331	P	230	P	44.0	P	9.7	P	7.9	P			28.4	P	259	P			0.00	P	1.1	P	0.9	P
+USGS	390447107175001	2026-05-24 05:00	MDT	-2.30	P			26.0	P	6.3	P	525	P	0.00	P	1311	P	329	P	223	P	48.0	P	9.8	P	7.7	P			28.3	P	259	P	0.02	P	0.17	P	0.8	P	0.4	P
+USGS	390447107175001	2026-05-24 06:00	MDT	0.40	P			25.9	P	7.1	P	526	P	0.10	P	1311	P	336	P	231	P	45.8	P	9.7	P	7.6	P			28.3	P	293	P	0.05	P	0.50	P	2.6	P	0.8	P
+USGS	390447107175001	2026-05-24 07:00	MDT	59.5	P			25.9	P	7.6	P	526	P	11.0	P	1311	P	348	P	233	P	44.3	P	9.3	P	7.4	P			28.3	P	296	P	0.18	P	1.83	P	5.4	P	0.8	P
+USGS	390447107175001	2026-05-24 08:00	MDT	242	P			26.0	P	8.9	P	526	P	48.2	P	1311	P	377	P	241	P	42.5	P	8.3	P	7.2	P			28.3	P	260	P	0.17	P	3.50	P	12.5	P	0.3	P
+USGS	390447107175001	2026-05-24 09:00	MDT	469	P			26.1	P	10.5	P	526	P	83.5	P	1311	P	421	P	236	P	40.0	P	3.3	P	7.2	P			28.2	P	259	P	0.07	P	3.17	P	22.3	P	0.6	P
+USGS	390447107175001	2026-05-24 10:00	MDT	476	P			26.2	P	11.0	P	527	P	72.8	P	1311	P	434	P	246	P	39.9	P	0.0	P	7.1	P			28.2	P	284	P	0.17	P	3.00	P	24.7	P	0.8	P
+USGS	390447107175001	2026-05-24 11:00	MDT	657	P			26.4	P	11.6	P	527	P	95.6	P	1311	P	456	P	251	P	40.1	P	0.0	P	7.3	P			28.2	P	296	P	0.23	P	4.33	P	28.8	P	1.4	P
+USGS	390447107175001	2026-05-24 12:00	MDT	386	P			26.4	P	10.8	P	527	P	52.9	P	1311	P	430	P	239	P	42.7	P	0.0	P	7.4	P			28.1	P	316	P	0.05	P	4.67	P	23.3	P	2.8	P
+USGS	390447107175001	2026-05-24 13:00	MDT	498	P			26.3	P	9.5	P	527	P	70.3	P	1311	P	419	P	234	P	46.8	P	2.5	P	7.8	P			28.2	P	318	P			17.00	P	22.1	P	1.4	P
+USGS	390447107175001	2026-05-24 14:00	MDT	750	P			26.3	P	13.8	P	527	P	99.7	P	1311	P	472	P	250	P	36.6	P	0.0	P	8.1	P			28.2	P	296	P			4.00	P	33.5	P	1.5	P
+USGS	390447107175001	2026-05-24 15:00	MDT	784	P			26.3	P	12.6	P	527	P	90.1	P	1311	P	447	P	339	P	40.4	P	0.0	P	8.4	P	0.0070	P	28.2	P	289	P			3.50	P	25.0	P	1.3	P
+USGS	390447107175001	2026-05-24 16:00	MDT	210	P			26.2	P	14.4	P	527	P	48.1	P	1311	P	419	P	242	P	34.2	P	0.0	P	8.7	P	0.0080	P	28.3	P	294	P			3.83	P	16.5	P	1.6	P
+USGS	390447107175001	2026-05-24 17:00	MDT	194	P			26.1	P	13.3	P	526	P	26.7	P	1311	P	402	P	245	P	37.7	P	0.0	P	9.1	P			28.3	P	308	P	0.03	P	3.00	P	15.3	P	1.1	P
+USGS	390447107175001	2026-05-24 18:00	MDT	125	P			26.0	P	12.9	P	526	P	17.6	P	1311	P	389	P	238	P	37.7	P	0.0	P	9.3	P			28.3	P	303	P	0.08	P	2.17	P	13.2	P	0.9	P
+USGS	390447107175001	2026-05-24 19:00	MDT	82.2	P			25.8	P	12.0	P	526	P	9.80	P	1311	P	379	P	243	P	40.5	P	0.0	P	9.4	P			28.4	P	310	P	0.27	P	2.67	P	11.7	P	0.6	P
+USGS	390447107175001	2026-05-24 20:00	MDT	21.4	P			25.7	P	11.6	P	526	P	2.80	P	1311	P	362	P	241	P	37.1	P	0.0	P	9.5	P			28.4	P	276	P	0.13	P	3.33	P	7.6	P	0.9	P
+USGS	390447107175001	2026-05-24 21:00	MDT	0.00	P			25.6	P	9.8	P	526	P	0.20	P	1311	P	350	P	111	P	39.5	P	9.1	P	9.5	P			28.3	P	270	P	0.40	P	4.50	P	5.4	P	1.6	P
+USGS	390447107175001	2026-05-24 22:00	MDT	-2.50	P			25.5	P	9.8	P	526	P	0.00	P	1311	P	346	P	151	P	35.7	P	9.3	P	9.4	P			28.3	P	269	P	0.43	P	4.33	P	4.4	P	0.2	P
+USGS	390447107175001	2026-05-24 23:00	MDT	-2.90	P			25.4	P	9.9	P	526	P	0.00	P	1311	P	345	P	143	P	35.6	P	9.4	P	9.3	P			28.3	P	269	P	0.02	P	0.17	P	4.0	P	0.8	P
+USGS	390447107175001	2026-05-25 00:00	MDT	-2.70	P			25.3	P	9.1	P	526	P	0.00	P	1311	P	342	P	161	P	38.3	P	9.5	P	9.1	P			28.3	P	267	P	0.17	P	2.17	P	3.5	P	0.7	P
+USGS	390447107175001	2026-05-25 01:00	MDT	-3.20	P			25.2	P	8.2	P	526	P	0.00	P	1311	P	342	P	91	P	44.2	P	9.5	P	9.0	P			28.3	P	265	P			0.00	P	3.7	P	3.6	P
+USGS	390447107175001	2026-05-25 02:00	MDT	-2.50	P			25.2	P	8.8	P	526	P	0.00	P	1311	P	340	P	122	P	39.4	P	9.5	P	8.8	P			28.3	P	267	P			0.50	P	2.9	P	0.2	P
+USGS	390447107175001	2026-05-25 03:00	MDT	-2.50	P			25.1	P	8.9	P	526	P	0.00	P	1311	P	339	P	175	P	38.3	P	9.5	P	8.6	P			28.2	P	266	P			3.00	P	2.7	P	0.0	P
+USGS	390447107175001	2026-05-25 04:00	MDT	-3.00	P			25.0	P	8.7	P	526	P	0.00	P	1311	P	338	P	101	P	38.4	P	9.6	P	8.5	P			28.2	P	265	P			1.00	P	2.5	P	0.7	P
+USGS	390447107175001	2026-05-25 05:00	MDT	-2.30	P			25.0	P	8.6	P	526	P	0.00	P	1311	P	337	P	178	P	37.9	P	9.6	P	8.3	P			28.1	P	264	P			0.00	P	2.2	P	0.2	P
+USGS	390447107175001	2026-05-25 06:00	MDT	-0.40	P			24.9	P	8.8	P	525	P	0.20	P	1311	P	337	P	266	P	37.6	P	9.6	P	8.2	P			28.1	P	265	P			0.00	P	2.2	P	0.1	P

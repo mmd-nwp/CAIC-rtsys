@@ -1,0 +1,504 @@
+import os
+import argparse
+import pygrib
+import numpy as np
+import mysql.connector
+import pyproj
+from scipy.ndimage import map_coordinates
+from datetime import datetime, timedelta, timezone
+from netCDF4 import Dataset
+
+# --- Configuration ---
+DB_CONFIG = {
+    'host': 'localhost',
+    'user': 'caic',
+    'password': 'steepndeep',
+    'database': 'ptfcst'
+}
+
+# --- Grid Subsetting Function ---
+
+def get_grid_subset_indices(lats, lons, projparams, stations, buffer=15):
+    """Calculates the bounding box indices of the grid that cover the station list."""
+    p = pyproj.Proj(projparams)
+    X_grid, Y_grid = p(lons, lats)
+    x_start, x_end = X_grid[0, 0], X_grid[0, -1]
+    y_start, y_end = Y_grid[0, 0], Y_grid[-1, 0]
+    rows, cols = X_grid.shape
+
+    min_i, max_i, min_j, max_j = cols, 0, rows, 0
+
+    for stn in stations:
+        stn_x, stn_y = p(float(stn['lon']), float(stn['lat']))
+        i_idx = int((stn_x - x_start) / (x_end - x_start) * (cols - 1))
+        j_idx = int((stn_y - y_start) / (y_end - y_start) * (rows - 1))
+        min_i, max_i = min(min_i, i_idx), max(max_i, i_idx)
+        min_j, max_j = min(min_j, j_idx), max(max_j, j_idx)
+
+    min_j, max_j = max(0, min_j - buffer), min(rows, max_j + buffer)
+    min_i, max_i = max(0, min_i - buffer), min(cols, max_i + buffer)
+    return (slice(min_j, max_j), slice(min_i, max_i))
+
+
+# --- Data Extraction Functions ---
+
+def preload_ndfd_grib(file_path, stations):
+    """Loads an entire NDFD file, subsetting grids and extracting TMAX/TMIN."""
+    ndfd_cache = {}
+    apcp_raw, asnow_raw = {}, {}
+    master_grid = None
+    ref_time = None
+    
+    try:
+        grbs = pygrib.open(file_path)
+    except Exception as e:
+        print(f"Error opening NDFD file: {e}")
+        return ndfd_cache, None
+
+    for msg in grbs:
+        msg_str = str(msg).lower()
+        keys = msg.keys()
+        
+        # SAFE KEY EXTRACTION
+        if 'std dev' in msg_str or 'percentile' in msg_str or 'probability' in msg_str or 'probabilityType' in keys or 'percentileValue' in keys:
+            continue
+
+        cat = msg.parameterCategory if 'parameterCategory' in keys else None
+        num = msg.parameterNumber if 'parameterNumber' in keys else None
+        level = msg.level if 'level' in keys else None
+        step_type = msg.stepType if 'stepType' in keys else None
+
+        target_var = None
+        if cat == 0 and num == 0 and level == 2: target_var = 'TMP_2m'
+        elif cat == 0 and num == 4 and level == 2: target_var = 'TMAX_2m' 
+        elif cat == 0 and num == 5 and level == 2: target_var = 'TMIN_2m' 
+        elif cat == 2 and num == 2 and level == 10: target_var = 'UGRD_10m'
+        elif cat == 2 and num == 3 and level == 10: target_var = 'VGRD_10m'
+        elif cat == 2 and num == 22: target_var = 'GUST_sfc'
+        elif cat == 6 and num == 1: target_var = 'TCDC_atm'
+        elif cat == 2 and num == 1 and level == 10: target_var = 'WSPD_10m'
+        elif cat == 2 and num == 0 and level == 10: target_var = 'WDIR_10m'
+        elif cat == 1 and num == 8 and step_type == 'accum': target_var = 'APCP_acc'
+        elif cat == 1 and num == 29 and step_type == 'accum': target_var = 'ASNOW_acc'
+
+        if not target_var:
+            continue 
+
+        if ref_time is None:
+            ref_time = msg.analDate
+
+        step_range = str(msg.stepRange) if 'stepRange' in keys else ''
+        try:
+            if '-' in step_range:
+                start_fhr, end_fhr = float(step_range.split('-')[0]), float(step_range.split('-')[1])
+            else:
+                start_fhr, end_fhr = 0.0, float(step_range)
+            valid_time = msg.analDate + timedelta(hours=end_fhr)
+        except:
+            valid_time = msg.validDate
+            start_fhr, end_fhr = None, None
+
+        if valid_time not in ndfd_cache:
+            ndfd_cache[valid_time] = {
+                'TMP_2m': None, 'TMAX_2m': None, 'TMIN_2m': None, 
+                'UGRD_10m': None, 'VGRD_10m': None, 'GUST_sfc': None, 
+                'TCDC_atm': None, 'APCP_acc': None, 'ASNOW_acc': None,
+                'WSPD_10m': None, 'WDIR_10m': None
+            }
+
+        if master_grid is None:
+            raw_lats, raw_lons = msg.latlons()
+            projparams = getattr(msg, 'projparams', None)
+            slice_obj = get_grid_subset_indices(raw_lats, raw_lons, projparams, stations)
+            master_grid = (raw_lats[slice_obj], raw_lons[slice_obj], projparams, slice_obj)
+
+        slice_obj = master_grid[3]
+        val = msg.values[slice_obj]
+        ndfd_cache[valid_time][target_var] = val
+
+        if start_fhr is not None:
+            if target_var == 'APCP_acc': apcp_raw[(start_fhr, end_fhr)] = val
+            elif target_var == 'ASNOW_acc': asnow_raw[(start_fhr, end_fhr)] = val
+
+    grbs.close()
+
+    def resolve_stubs(raw_dict, var_key):
+        for (s1, e1), vals1 in raw_dict.items():
+            if s1 == 0 and e1 <= 6:
+                for (s2, e2), vals2 in raw_dict.items():
+                    if 0 < s2 < e1 and e2 == e1 + s2:
+                        stub_vt = ref_time + timedelta(hours=s2)
+                        if stub_vt not in ndfd_cache:
+                            ndfd_cache[stub_vt] = {k: None for k in ndfd_cache[list(ndfd_cache.keys())[0]]}
+                        ndfd_cache[stub_vt][var_key] = np.maximum(0.0, vals1 - vals2)
+
+    if ref_time is not None:
+        resolve_stubs(apcp_raw, 'APCP_acc')
+        resolve_stubs(asnow_raw, 'ASNOW_acc')
+
+    for vt, data in ndfd_cache.items():
+        if data['UGRD_10m'] is None and data['VGRD_10m'] is None:
+            if data['WSPD_10m'] is not None and data['WDIR_10m'] is not None:
+                wdir_rad = np.radians(data['WDIR_10m'])
+                data['UGRD_10m'] = -data['WSPD_10m'] * np.sin(wdir_rad)
+                data['VGRD_10m'] = -data['WSPD_10m'] * np.cos(wdir_rad)
+        data.pop('WSPD_10m', None); data.pop('WDIR_10m', None)
+
+    return ndfd_cache, master_grid
+
+
+def extract_grib_data_robust(file_path, model_id, fhr, stations, master_grid=None):
+    """Reads subset variables from a GRIB2 file using cached grid slicing."""
+    grib_data = {
+        'TMP_2m': None, 'UGRD_10m': None, 'VGRD_10m': None, 
+        'GUST_sfc': None, 'TCDC_atm': None, 'APCP_acc': None, 'ASNOW_acc': None,
+        'ASNOW10_acc': None, 'ASNOW90_acc': None, 
+        'WSPD_10m': None, 'WDIR_10m': None 
+    }
+    
+    try: grbs = pygrib.open(file_path)
+    except: return None, master_grid
+
+    for msg in grbs:
+        msg_str = str(msg).lower()
+        keys = msg.keys()
+        
+        # SAFE KEY EXTRACTION
+        cat = msg.parameterCategory if 'parameterCategory' in keys else None
+        num = msg.parameterNumber if 'parameterNumber' in keys else None
+        level = msg.level if 'level' in keys else None
+        step_range = str(msg.stepRange) if 'stepRange' in keys else ''
+        step_type = msg.stepType if 'stepType' in keys else None
+        
+        is_percentile = ('percentileValue' in keys) or ('percentile' in msg_str)
+        
+        if 'std dev' in msg_str or 'probability' in msg_str or ('probabilityType' in keys): 
+            continue
+            
+        if is_percentile and not (model_id == 'nbm' and cat == 1 and num == 29):
+            continue
+
+        target_var = None
+        if cat == 0 and num == 0 and level == 2: target_var = 'TMP_2m'
+        elif cat == 2 and num == 2 and level == 10: target_var = 'UGRD_10m'
+        elif cat == 2 and num == 3 and level == 10: target_var = 'VGRD_10m'
+        elif cat == 2 and num == 22: target_var = 'GUST_sfc'
+        elif cat == 6 and num == 1: target_var = 'TCDC_atm'
+        elif cat == 2 and num == 1 and level == 10: target_var = 'WSPD_10m'
+        elif cat == 2 and num == 0 and level == 10: target_var = 'WDIR_10m'
+        elif cat == 1 and num == 8 and step_type == 'accum':
+            if model_id == 'nbm':
+                if fhr > 0 and str(step_range) == (f"{fhr-1}-{fhr}" if fhr <= 36 else f"{fhr-6}-{fhr}"): target_var = 'APCP_acc'
+            elif str(step_range).startswith('0-'): target_var = 'APCP_acc'
+            
+        elif cat == 1 and num == 29 and step_type == 'accum':
+            if model_id == 'nbm':
+                if fhr > 0 and str(step_range) == (f"{fhr-1}-{fhr}" if fhr <= 36 else f"{fhr-6}-{fhr}"):
+                    if 'percentileValue' in keys:
+                        perc_val = msg.percentileValue
+                        if perc_val == 10: target_var = 'ASNOW10_acc'
+                        elif perc_val == 90: target_var = 'ASNOW90_acc'
+                    elif not is_percentile:
+                        target_var = 'ASNOW_acc'
+            elif str(step_range).startswith('0-'): target_var = 'ASNOW_acc'
+
+        if not target_var:
+            continue  
+
+#       if target_var == 'ASNOW_acc':
+#           print(msg)
+
+        if master_grid is None:
+            raw_lats, raw_lons = msg.latlons()
+            projparams = getattr(msg, 'projparams', None)
+            slice_obj = get_grid_subset_indices(raw_lats, raw_lons, projparams, stations)
+            master_grid = (raw_lats[slice_obj], raw_lons[slice_obj], projparams, slice_obj)
+
+        slice_obj = master_grid[3]
+        grib_data[target_var] = msg.values[slice_obj]
+
+    grbs.close()
+
+    if grib_data['UGRD_10m'] is None and grib_data['VGRD_10m'] is None:
+        if grib_data['WSPD_10m'] is not None and grib_data['WDIR_10m'] is not None:
+            wdir_rad = np.radians(grib_data['WDIR_10m'])
+            grib_data['UGRD_10m'] = -grib_data['WSPD_10m'] * np.sin(wdir_rad)
+            grib_data['VGRD_10m'] = -grib_data['WSPD_10m'] * np.cos(wdir_rad)
+
+    grib_data.pop('WSPD_10m', None); grib_data.pop('WDIR_10m', None)
+    return grib_data, master_grid
+
+
+def extract_wrf_data(file_path, stations, master_grid=None):
+    """Reads subset variables from WRF NetCDF directly using netCDF4 slicing."""
+    wrf_data = {
+        'TMP_2m': None, 'UGRD_10m': None, 'VGRD_10m': None, 
+        'GUST_sfc': None, 'TCDC_atm': None, 'APCP_acc': None, 'ASNOW_acc': None,
+        'SINALPHA': None, 'COSALPHA': None, 'SNOW_SWE_acc': None
+    }
+    
+    try: nc = Dataset(file_path, 'r')
+    except: return None, master_grid
+
+    if master_grid is None:
+        raw_lats, raw_lons = nc.variables['XLAT'][0, :, :], nc.variables['XLONG'][0, :, :]
+        try:
+            if getattr(nc, 'MAP_PROJ', 1) == 1:
+                wrf_projparams = {'proj': 'lcc', 'lat_1': getattr(nc, 'TRUELAT1'), 'lat_2': getattr(nc, 'TRUELAT2'), 'lat_0': getattr(nc, 'MOAD_CEN_LAT'), 'lon_0': getattr(nc, 'STAND_LON'), 'R': 6370000.0}
+            else: wrf_projparams = {}
+        except: wrf_projparams = {}
+        slice_obj = get_grid_subset_indices(raw_lats, raw_lons, wrf_projparams, stations)
+        master_grid = (raw_lats[slice_obj], raw_lons[slice_obj], wrf_projparams, slice_obj)
+
+    s_y, s_x = master_grid[3]
+
+    try:
+        if 'T2' in nc.variables: wrf_data['TMP_2m'] = nc.variables['T2'][0, s_y, s_x]
+        if 'U10' in nc.variables: wrf_data['UGRD_10m'] = nc.variables['U10'][0, s_y, s_x]
+        if 'V10' in nc.variables: wrf_data['VGRD_10m'] = nc.variables['V10'][0, s_y, s_x]
+            
+        if 'UST' in nc.variables and wrf_data['UGRD_10m'] is not None and wrf_data['VGRD_10m'] is not None:
+            ust = nc.variables['UST'][0, s_y, s_x]
+            wrf_data['GUST_sfc'] = np.sqrt(wrf_data['UGRD_10m']**2 + wrf_data['VGRD_10m']**2) + (7.71 * ust)
+            
+        if 'SINALPHA' in nc.variables: wrf_data['SINALPHA'] = nc.variables['SINALPHA'][0, s_y, s_x]
+        if 'COSALPHA' in nc.variables: wrf_data['COSALPHA'] = nc.variables['COSALPHA'][0, s_y, s_x]
+            
+        if 'RAINC' in nc.variables and 'RAINNC' in nc.variables:
+            wrf_data['APCP_acc'] = nc.variables['RAINC'][0, s_y, s_x] + nc.variables['RAINNC'][0, s_y, s_x]
+            
+        if 'SNOWNC' in nc.variables:
+            graupelnc = nc.variables['GRAUPELNC'][0, s_y, s_x] if 'GRAUPELNC' in nc.variables else 0.0
+            wrf_data['SNOW_SWE_acc'] = nc.variables['SNOWNC'][0, s_y, s_x] + graupelnc
+
+        if 'CLDFRA' in nc.variables:
+            cldfra_3d = nc.variables['CLDFRA'][0, :, s_y, s_x]
+            wrf_data['TCDC_atm'] = np.max(cldfra_3d, axis=0) * 100.0
+    except Exception as e:
+        print(f"Error parsing subset WRF variables: {e}")
+
+    nc.close()
+    return wrf_data, master_grid
+
+
+# --- Database and Interpolation Functions ---
+
+def get_station_locations():
+    try:
+        conn = mysql.connector.connect(**DB_CONFIG)
+        cursor = conn.cursor(dictionary=True) 
+        cursor.execute("SELECT stnName, lat, lon FROM stnList")
+        stations = cursor.fetchall()
+        return stations
+    except mysql.connector.Error as err:
+        return []
+    finally:
+        if 'conn' in locals() and conn.is_connected():
+            cursor.close(); conn.close()
+
+
+def native_grid_bicubic_spline(grib_data, master_grid, stations, fhr):
+    lats, lons, projparams, _ = master_grid
+    p = pyproj.Proj(projparams)
+    X_grid, Y_grid = p(lons, lats)
+    x_start, x_end = X_grid[0, 0], X_grid[0, -1]
+    y_start, y_end = Y_grid[0, 0], Y_grid[-1, 0]
+    rows, cols = X_grid.shape
+    results = {stn['stnName']: {} for stn in stations}
+
+    for stn in stations:
+        stn_name = stn['stnName']
+        stn_x, stn_y = p(float(stn['lon']), float(stn['lat']))
+        
+        i_idx = (stn_x - x_start) / (x_end - x_start) * (cols - 1)
+        j_idx = (stn_y - y_start) / (y_end - y_start) * (rows - 1)
+        
+        if not (0 <= i_idx <= cols - 1 and 0 <= j_idx <= rows - 1):
+            for var_name in grib_data: results[stn_name][var_name] = np.nan
+            continue
+            
+        for var_name, data_array in grib_data.items():
+            if data_array is not None:
+                val = float(map_coordinates(data_array, [[j_idx], [i_idx]], order=3, mode='nearest')[0])
+                if var_name in ['APCP_acc', 'ASNOW_acc', 'ASNOW10_acc', 'ASNOW90_acc', 'GUST_sfc', 'SNOW_SWE_acc']: val = max(0.0, val) 
+                elif var_name == 'TCDC_atm': val = max(0.0, min(100.0, val)) 
+                results[stn_name][var_name] = val
+            else:
+                results[stn_name][var_name] = 0.0 if var_name in ['APCP_acc', 'ASNOW_acc', 'ASNOW10_acc', 'ASNOW90_acc', 'SNOW_SWE_acc'] and fhr == 0 else np.nan
+
+        u_grid, v_grid = results[stn_name].get('UGRD_10m'), results[stn_name].get('VGRD_10m')
+        sin_a, cos_a = results[stn_name].get('SINALPHA'), results[stn_name].get('COSALPHA')
+        
+        if all(x is not None and not np.isnan(x) for x in [u_grid, v_grid, sin_a, cos_a]):
+            results[stn_name]['UGRD_10m'] = (u_grid * cos_a) - (v_grid * sin_a)
+            results[stn_name]['VGRD_10m'] = (v_grid * cos_a) + (u_grid * sin_a)
+
+    return results
+
+
+def insert_bulk_forecasts_to_db(station_timeseries, init_dt, model_id):
+    """Executes a single massive insert for all stations and all hours."""
+    db_rows = []
+    
+    conv_temp = lambda k: int(round(((k - 273.15) * 1.8 + 32) * 10)) if k is not None and not np.isnan(k) else None
+    conv_wind = lambda ms: int(round(ms * 2.23694 * 10)) if ms is not None and not np.isnan(ms) else None
+    conv_cloud = lambda pct: int(round(pct)) if pct is not None and not np.isnan(pct) else None
+    conv_pcp = lambda kg: int(round((kg / 25.4) * 100)) if kg is not None and not np.isnan(kg) else None
+    conv_snow = lambda m: int(round((m * 39.3701) * 10)) if m is not None and not np.isnan(m) else None
+
+    for stn_name, timeseries in station_timeseries.items():
+        for vt, data in timeseries.items():
+            db_rows.append((
+                stn_name, model_id, init_dt, vt, 
+                conv_temp(data.get('TMP_2m')), conv_wind(data.get('UGRD_10m')), 
+                conv_wind(data.get('VGRD_10m')), conv_wind(data.get('GUST_sfc')), 
+                conv_cloud(data.get('TCDC_atm')), conv_pcp(data.get('APCP_acc')), 
+                conv_snow(data.get('ASNOW_acc')), 
+                conv_snow(data.get('ASNOW10_acc')),
+                conv_snow(data.get('ASNOW90_acc')) 
+            ))
+
+    if not db_rows:
+        return
+
+    try:
+        conn = mysql.connector.connect(**DB_CONFIG)
+        cursor = conn.cursor()
+        cursor.executemany("REPLACE INTO stnPtfcst (stnName, modelId, initTime, validTime, shltrTemp, shltrUwnd, shltrVwnd, shltrGust, cloud, aPcp, aSnow, aSnow10, aSnow90) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", db_rows)
+        conn.commit()
+        print(f"\nSUCCESS: {cursor.rowcount} total forecast rows inserted into the database in bulk!")
+    except Exception as err:
+        print(f"\nDB Error: {err}")
+    finally:
+        if 'conn' in locals() and conn.is_connected(): cursor.close(); conn.close()
+
+
+# --- Main Execution ---
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--model', type=str, default='hrrr')
+    parser.add_argument('--time', type=str)
+    parser.add_argument('--length', type=int, default=None)
+    
+    args = parser.parse_args()
+    model_id = args.model.lower()
+    forecast_length = args.length if args.length is not None else (48 if model_id == 'hrrr' else 84)
+
+    if args.time:
+        init_dt = datetime.strptime(args.time, '%Y%m%d%H')
+    else:
+        now_utc = datetime.now(timezone.utc).replace(tzinfo=None) 
+        if model_id in ['hrrr', 'ndfd']: init_dt = datetime(now_utc.year, now_utc.month, now_utc.day, now_utc.hour, 0)
+        else: init_dt = datetime(now_utc.year, now_utc.month, now_utc.day, (now_utc.hour // 6) * 6, 0)
+
+    file_prefix = init_dt.strftime('%y%j%H00')
+    base_dir = f"/model/caic/{'2km' if model_id == 'wrf2km' else '4km'}/wrf/{file_prefix}" if model_id.startswith('wrf') else f"/data/noaaport/grids/{model_id}/grib2"
+    station_list = get_station_locations()
+    
+    if station_list:
+        station_states = {stn['stnName']: {'NBM_APCP': 0.0, 'NBM_ASNOW': 0.0, 'NBM_ASNOW10': 0.0, 'NBM_ASNOW90': 0.0, 'NDFD_APCP': 0.0, 'NDFD_ASNOW': 0.0, 'WRF_PREV_SWE': 0.0, 'WRF_ASNOW': 0.0} for stn in station_list}
+        
+        # Master timeseries dictionary for bulk insertion & post-processing ---
+        station_timeseries = {stn['stnName']: {} for stn in station_list}
+        
+        master_grid, ndfd_cache = None, {}
+        
+        if model_id == 'ndfd':
+            ndfd_file = os.path.join(base_dir, 'ndfd.grb2')
+            if os.path.exists(ndfd_file): ndfd_cache, master_grid = preload_ndfd_grib(ndfd_file, station_list)
+            else: exit(1)
+        
+        for fhr in range(forecast_length + 1):
+            valid_time = init_dt + timedelta(hours=fhr)
+            
+            if model_id == 'ndfd':
+                forecast_data = ndfd_cache.get(valid_time)
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Aggregating Hour: +{fhr} (Valid: {valid_time.strftime('%H:%MZ')})")
+            else:
+                current_file = os.path.join(base_dir, f"wrfout_d02_{valid_time.strftime('%Y-%m-%d_%H:%M:00')}" if model_id.startswith('wrf') else f"{file_prefix}{fhr:04d}")
+                if not os.path.exists(current_file): continue
+                    
+                if model_id.startswith('wrf'): forecast_data, master_grid = extract_wrf_data(current_file, station_list, master_grid)
+                else: forecast_data, master_grid = extract_grib_data_robust(current_file, model_id, fhr, station_list, master_grid)
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Aggregating Hour: +{fhr} (Valid: {valid_time.strftime('%H:%MZ')})")
+            
+            if forecast_data and master_grid is not None:
+                hourly_forecasts = native_grid_bicubic_spline(forecast_data, master_grid, station_list, fhr)
+                
+                if model_id.startswith('wrf'):
+                    for stn_name, data in hourly_forecasts.items():
+                        c_swe, t_k = data.get('SNOW_SWE_acc'), data.get('TMP_2m')
+                        if c_swe is not None and t_k is not None and not np.isnan(c_swe) and not np.isnan(t_k):
+                            temp_f = (t_k - 273.15) * 1.8 + 32
+                            density = 15.0 if temp_f <= 20 else (15.0 - 5.0 * ((temp_f - 20.0) / 12.0) if temp_f <= 32 else (10.0 - 9.0 * ((temp_f - 32.0) / 4.0) if temp_f <= 36 else 0.0))
+                            station_states[stn_name]['WRF_ASNOW'] += (max(0.0, c_swe - station_states[stn_name]['WRF_PREV_SWE']) * density) / 1000.0
+                            station_states[stn_name]['WRF_PREV_SWE'] = c_swe
+                        hourly_forecasts[stn_name]['ASNOW_acc'] = station_states[stn_name]['WRF_ASNOW']
+                        
+                elif model_id in ['nbm', 'ndfd']:
+                    prefix = 'NBM' if model_id == 'nbm' else 'NDFD'
+                    for stn_name, data in hourly_forecasts.items():
+                        
+                        # --- THE FIX: ONLY increment if data exists. Never force to NaN ---
+                        if data.get('APCP_acc') is not None and not np.isnan(data.get('APCP_acc')): 
+                            station_states[stn_name][f'{prefix}_APCP'] += data.get('APCP_acc')
+                            
+                        if data.get('ASNOW_acc') is not None and not np.isnan(data.get('ASNOW_acc')): 
+                            station_states[stn_name][f'{prefix}_ASNOW'] += data.get('ASNOW_acc')
+                        
+                        if model_id == 'nbm':
+                            raw_10 = data.get('ASNOW10_acc')
+                            raw_90 = data.get('ASNOW90_acc')
+                            
+                            # 10th Percentile Handling: Nullify after hour 54
+                            if raw_10 is not None and not np.isnan(raw_10): 
+                                station_states[stn_name]['NBM_ASNOW10'] += raw_10
+                            elif fhr > 54:
+                                station_states[stn_name]['NBM_ASNOW10'] = np.nan
+                                
+                            # 90th Percentile Handling: Nullify after hour 54
+                            if raw_90 is not None and not np.isnan(raw_90): 
+                                station_states[stn_name]['NBM_ASNOW90'] += raw_90
+                            elif fhr > 54:
+                                station_states[stn_name]['NBM_ASNOW90'] = np.nan
+                                
+                            hourly_forecasts[stn_name]['ASNOW10_acc'] = station_states[stn_name]['NBM_ASNOW10']
+                            hourly_forecasts[stn_name]['ASNOW90_acc'] = station_states[stn_name]['NBM_ASNOW90']
+
+                        hourly_forecasts[stn_name]['APCP_acc'] = station_states[stn_name][f'{prefix}_APCP']
+                        hourly_forecasts[stn_name]['ASNOW_acc'] = station_states[stn_name][f'{prefix}_ASNOW']
+                
+                # Append the hour to the master timeseries dictionary
+                for stn_name, data in hourly_forecasts.items():
+                    station_timeseries[stn_name][valid_time] = data.copy()
+
+        # NDFD Max/Min Temperature Post-Processor ---
+        if model_id == 'ndfd':
+            print("\nApplying TMAX and TMIN overrides to diurnal temperature curves...")
+            for stn_name, timeseries in station_timeseries.items():
+                valid_times = sorted(timeseries.keys())
+                
+                for vt in valid_times:
+                    tmax = timeseries[vt].get('TMAX_2m')
+                    if tmax is not None and not np.isnan(tmax):
+                        window_start = vt - timedelta(hours=12)
+                        window_times = [t for t in valid_times if window_start < t <= vt]
+                        
+                        if window_times:
+                            max_t = max(window_times, key=lambda t: timeseries[t].get('TMP_2m', -999) if timeseries[t].get('TMP_2m') is not None else -999)
+                            if timeseries[max_t].get('TMP_2m') is not None:
+                                timeseries[max_t]['TMP_2m'] = tmax
+
+                    tmin = timeseries[vt].get('TMIN_2m')
+                    if tmin is not None and not np.isnan(tmin):
+                        window_start = vt - timedelta(hours=12)
+                        window_times = [t for t in valid_times if window_start < t <= vt]
+                        
+                        if window_times:
+                            min_t = min(window_times, key=lambda t: timeseries[t].get('TMP_2m', 9999) if timeseries[t].get('TMP_2m') is not None else 9999)
+                            if timeseries[min_t].get('TMP_2m') is not None:
+                                timeseries[min_t]['TMP_2m'] = tmin
+
+        # Execute single bulk DB insert
+        insert_bulk_forecasts_to_db(station_timeseries, init_dt, model_id)

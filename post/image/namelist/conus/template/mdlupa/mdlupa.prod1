@@ -1,0 +1,9 @@
+DOMAIN
+feld=avo; ptyp=hc; vcor=p; levs=500; cmth=fill; nolb; nohl; cbeg=0; cend=30; cint=3; smth=8;>
+ CORNERS
+ hvbr=1; nmin; nmsg; titl=500_mb_Height_(dm)_and_Absolute_Vorticity_(s~S~-1~N~);>
+ cosq=-1.5,b9,1.5,b10,4.5,def.background,7.5,def.background,10.5,b15,13.5,b18,16.5,b21,19.5,b23,22.5,b24,25.5,b25,28.5,b26,31.5,b28
+feld=ght1; ptyp=hc; cbeg=468; cint=GHTCINT; nohl; linw=2; colr=def.foreground; smth=16; nmin; nmsg; nttl
+MAP
+BOX
+===========================================================================

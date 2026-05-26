@@ -1,0 +1,44 @@
+# Accumulated precip.
+feld=rtotsh0; ptyp=hc; hvbr=HVBR; >
+   xwin=XWIN; ywin=YWIN; >
+   cbeg=1; cend=10; cint=1;>
+   cmth=fill; titl=Total_Precipitation_(in)_and_Surface_Wind_(kt); ppcb; >
+   cosq=0,white,1,white,>
+        1,lightest.blue,2,lightest.blue,>
+        2,lighter.blue,5,lighter.blue,>
+        5,blue.5,10,blue.5,>
+        10,transparent
+feld=rtotsh0; ptyp=hc; addf=3.937; nttl
+feld=rtotsh0; ptyp=hc; addf=-1; save=rtotsh0in; nttl
+feld=rtotsh0in; ptyp=hc; >
+   cbeg=10; cend=100; cint=10;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        10,blue.7,20,blue.7,>
+        20,blue,30,blue,>
+        30,light.green,40,light.green,>
+        40,green,50,green,>
+        50,dark.green,60,dark.green,>
+        60,dark.yellow,70,dark.yellow,>
+        70,yellow,80,yellow,>
+        80,lighter.orange,90,lighter.orange,>
+        90,orange,100,orange,>
+        100,transparent
+feld=rtotsh0; ptyp=hc; addf=3.937; nttl
+feld=rtotsh0; ptyp=hc; addf=-1; save=rtotsh0in; nttl
+feld=rtotsh0in; ptyp=hc; >
+   cbeg=100; cend=400; cint=50;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        100,red,150,red,>
+        150,dark.red,200,dark.red,>
+        200,light.red,250,light.red,>
+        250,magenta,300,magenta,>
+        300,violet,400,violet,>
+        400,transparent
+feld=suw,svw; ptyp=hv; vcmx=-5; fulb=10kts; nmsg;>
+   linw=1; smth=0; intv=INTV; colr=dark.gray;>
+   nttl; nmin
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

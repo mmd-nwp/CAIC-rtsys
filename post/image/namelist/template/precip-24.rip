@@ -1,0 +1,89 @@
+# 24-hour precip.
+feld=r24; ptyp=hc; hvbr=HVBR; >
+   xwin=XWIN; ywin=YWIN; >
+   cbeg=0.25; cend=2.50; cint=0.25;>
+   cmth=fill; titl=Precipitation_(in,_24-h_image,_1-h_cont)_and_Surface_Wind_(ms~S~-1~N~); ppmm; >
+   cosq=0,white,0.25,white,>
+        0.25,lightest.blue,0.50,lightest.blue,>
+        0.50,lighter.blue,1.25,lighter.blue,>
+        1.25,blue.5,2.50,blue.5,>
+        2.50,transparent
+feld=r24; ptyp=hc; >
+   cbeg=2.50; cend=25.00; cint=2.50;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        2.50,blue.7,5.00,blue.7,>
+        5.00,blue,7.50,blue,>
+        7.50,light.green,10.00,light.green,>
+        10.00,green,12.50,green,>
+        12.50,dark.green,15.00,dark.green,>
+        15.00,dark.yellow,17.50,dark.yellow,>
+        17.50,yellow,20.00,yellow,>
+        20.00,lighter.orange,22.50,lighter.orange,>
+        22.50,orange,25.00,orange,>
+        25.00,transparent
+feld=r24; ptyp=hc; >
+   cbeg=25.00; cend=100; cint=12.5;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        25.0,red,37.5,red,>
+        37.5,dark.red,50.0,dark.red,>
+        50.0,light.red,62.5,light.red,>
+        62.5,magenta,75.0,magenta,>
+        75.0,violet,100,violet,>
+        100,transparent
+feld=r01; ptyp=hc; >
+   cbeg=0.25; cend=0.25; cint=0.25;>
+   nttl; nobr; linw=1; colr=def.foreground; nohl; nmin; nmsg
+feld=r01; ptyp=hc; >
+   cbeg=0.50; cend=0.50; cint=0.50;>
+   nttl; nobr; linw=1; colr=def.foreground; nohl; nmin; nmsg
+feld=r01; ptyp=hc; >
+   cbeg=2.50; cend=2.50; cint=2.50;>
+   nttl; nobr; linw=1; colr=def.foreground; nohl; nmin; nmsg
+feld=suw,svw; ptyp=hv; vcmx=-5; fulb=5mps; nmsg;>
+   linw=1; smth=0; intv=INTV; colr=med.gray;>
+   nttl; nmin
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================
+# 1-h precip.
+feld=r01; ptyp=hc; hvbr=HVBR; >
+   xwin=XWIN; ywin=YWIN; >
+   cbeg=0.25; cend=2.50; cint=0.25;>
+   cmth=fill; titl=1-h_Precipitation_(in)_and_Surface_Wind_(ms~S~-1~N~); ppmm; >
+   cosq=0,white,0.25,white,>
+        0.25,lightest.blue,0.50,lightest.blue,>
+        0.50,lighter.blue,1.25,lighter.blue,>
+        1.25,blue.5,2.50,blue.5,>
+        2.50,transparent
+feld=r01; ptyp=hc; >
+   cbeg=2.50; cend=25.00; cint=2.50;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        2.50,blue.7,5.00,blue.7,>
+        5.00,blue,7.50,blue,>
+        7.50,light.green,10.00,light.green,>
+        10.00,green,12.50,green,>
+        12.50,dark.green,15.00,dark.green,>
+        15.00,dark.yellow,17.50,dark.yellow,>
+        17.50,yellow,20.00,yellow,>
+        20.00,lighter.orange,22.50,lighter.orange,>
+        22.50,orange,25.00,orange,>
+        25.00,transparent
+feld=r01; ptyp=hc; >
+   cbeg=25.00; cend=100; cint=12.5;>
+   cmth=fill; nttl; nobr; >
+   cosq=0,transparent,>
+        25.0,red,37.5,red,>
+        37.5,dark.red,50.0,dark.red,>
+        50.0,light.red,62.5,light.red,>
+        62.5,magenta,75.0,magenta,>
+        75.0,violet,100,violet,>
+        100,transparent
+feld=suw,svw; ptyp=hv; vcmx=-5; fulb=5mps; nmsg;>
+   linw=1; smth=0; intv=INTV; colr=med.gray;>
+   nttl; nmin
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=CRSA; crsb=CRSB
+===========================================================================

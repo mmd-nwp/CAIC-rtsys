@@ -1,0 +1,109 @@
+LVLNDPASS  39.6637 -105.8788 EJT          Loveland Pass
+BERTHPASS  39.7985 -105.7775 EJT          Berthoud Pass
+TUNNELS    39.6800 -105.9200 EJT          Tunnels
+VAIL_PASS  39.5310 -106.2170 EJT          Vail Pass
+CAMERONPCO 40.5100 -105.8900 EJT          Cameron Pass
+LONETREEBL 39.1075 -107.2818 Carbondale   Lone Tree Bowl
+CLIFFS     39.0522 -108.0602 Carbondale   Cliffs
+DOUGLASPAS 39.5973 -108.8112 Carbondale   Douglas Pass
+GWCSOUTH   39.5874 -107.1856 Carbondale   GWC South (Breakroom)
+GWCNORTH   39.5783 -107.2355 Carbondale   GWC North (Powerhouse)
+BLUECANYON 38.4132 -107.4104 Carbondale   Blue Canyon
+INDYPASSW  39.1229 -106.5876 Carbondale   Indy Pass West
+CRESTBOWL  38.4940 -106.3297 Leadville    Crest Bowl
+BIGSLIDE   38.5216 -106.3272 Leadville    Big Slide
+SWITCHBACK 39.5527 -106.3921 Leadville    Switchback Chutes
+BUCKEYE    39.3354 -106.2367 Leadville    Buckeye
+MTZION     39.3104 -106.2759 Leadville    Mt Zion
+YCHUTES    39.4924 -106.1157 Leadville    Y Chutes
+INDEPPASS  39.1085 -106.5876 Leadville    Independence Pass
+STARMTN    39.0616 -106.5333 Leadville    Star Mtn
+ENGINEERS  37.7030 -107.7792 Silverton    Engineers
+LIMECREEK  37.7316 -107.7738 Silverton    Lime Creek
+CHAMPIONPT 37.7921 -107.6881 Silverton    Champions Point
+MILLCREEK  37.8776 -107.7654 Silverton    Mill Creek
+BLUEPOINT  37.9099 -107.7072 Silverton    Blue Point
+TRICOPEAK  37.9053 -107.7370 Silverton    Trico
+MTABRAMS   37.9609 -107.6412 Silverton    Abrams
+MOTHERCLIN 37.9821 -107.6516 Silverton    Mother Cline
+PETERSON   37.7224 -108.0406 Ridgway      Peterson
+SNOWSPUR   37.8011 -107.9284 Ridgway      Snow Spur
+WHITELIZ   37.8173 -107.9012 Ridgway      White Lizard
+OPHIRROAD  37.8579 -107.8810 Ridgway      Ophir Road
+WOLFCKPASS 37.4827 -106.8021 Pagosa       Wolf Creek Pass
+SLUMGULPAS 37.9899 -107.2500 Pagosa       Slumgullion Pass
+CUMBRESPAS 37.0213 -106.4466 Pagosa       Cumbres Pass
+BCDOUGLASP 39.5975 -108.8032 North Mtns   Douglas Pass
+BCBISONLAK 39.7652 -107.3554 North Mtns   Bison Lake
+BCRIPPLECR 40.1119 -107.2956 North Mtns   Ripple Creek Pass
+BCBUFFPASS 40.5445 -106.6855 North Mtns   Buff Pass
+BCSTEAMBOA 40.4554 -106.7882 North Mtns   Steamboat 8k
+BCMOUNTZIR 40.8246 -106.6590 North Mtns   Mount Zirkel
+BCSANDMOUN 40.7544 -107.0467 North Mtns   Sand Mountain
+BCMTWERNER 40.4561 -106.7403 North Mtns   Mt Werner
+BCRABBITEA 40.3847 -106.6117 North Mtns   Rabbit Ears Pass
+BCMEDICINE 40.7515 -106.0148 North Mtns   Medicine Bow Mts
+BCSOUTHDIA 40.5160 -105.9004 North Mtns   South Diamond Peak
+BCPARKVIEW 40.3307 -106.1244 North Mtns   Parkview Mtn
+BCFLATTOP  40.3144 -105.6679 North Mtns   Flat Top RMNP
+BCARAPAHOL 39.9074 -105.6840 North Mtns   Arapaho Lakes
+BCBERTHOUD 39.7982 -105.7774 North Mtns   Berthoud Pass
+BCLOVELAND 39.6639 -105.8789 North Mtns   Loveland Pass
+BCELLIOTRI 39.8357 -106.4182 North Mtns   Elliot Ridge
+BCSHRINEMO 39.5352 -106.2595 North Mtns   Shrine Mountain
+BCPITKINLA 39.6941 -106.2886 North Mtns   Pitkin Lake
+BCVAIL8K   39.6435 -106.3780 North Mtns   Vail 8k
+BCGROUSEMO 39.5304 -106.5056 North Mtns   Grouse Mountain
+BCBRECKENR 39.4966 -106.1022 North Mtns   Breckenridge Peak 6
+BCMOUNTTHO 39.4248 -106.7380 Central Mtns Mount Thomas
+BCMOUNTNAS 39.2581 -106.6122 Central Mtns Mount Nast
+BCFREMONTP 39.3677 -106.1962 Central Mtns Fremont Pass
+BCUNCLEBUD 39.3117 -106.4057 Central Mtns Uncle Bud's
+BCGORDONGU 39.0885 -106.4109 Central Mtns Gordon Gulch
+BCHOOSIERP 39.3691 -106.0976 Central Mtns Hoosier Pass
+BCWESTONPA 39.1312 -106.1820 Central Mtns Weston Pass
+BCPIKESPEA 38.8772 -105.0653 Central Mtns Pikes Peak
+BCINDEPEND 39.1085 -106.5642 Central Mtns Independence Pass
+BCCOTTONWO 38.8279 -106.4092 Central Mtns Cottonwood Pass
+BCTINCUPPA 38.7092 -106.4344 Central Mtns Tincup Pass
+BCMONARCHP 38.4961 -106.3260 Central Mtns Monarch Pass
+BCASPEN8K  39.1911 -106.8299 Central Mtns Aspen 8k
+BCCATHEDRA 39.0280 -106.8429 Central Mtns Cathedral Lake
+BCHIGHLAND 39.1308 -106.8809 Central Mtns Highland Peak
+BCHUNTSMAN 39.1918 -107.3669 Central Mtns Huntsman Ridge
+BCCRESTEDB 38.8694 -106.9926 Central Mtns Crested Butte 9k
+BCCINNAMON 38.9990 -107.0682 Central Mtns Cinnamon Mountain
+BCRASPBERR 39.0316 -107.2131 Central Mtns Raspberry Creek
+BCWESTELK  38.7181 -107.1877 Central Mtns West Elk Peak
+BCMATCHLES 38.8339 -106.6449 Central Mtns Matchless Mountain
+BCFRIENDSH 38.9639 -106.8111 Central Mtns Friends Hut
+BCANTHRACI 38.8163 -107.1551 Central Mtns Anthracite Range
+BCISLANDLA 39.0353 -108.0042 Central Mtns Island Lake (GM)
+BCWINDYPOI 38.4580 -108.5380 South Mtns   Windy Point (Uncomp)
+BCTELLURID 37.9349 -107.8162 South Mtns   Telluride 9k
+BCWILSONPE 37.8701 -107.9747 South Mtns   Wilson Peak
+BCPALMYRAP 37.8899 -107.8290 South Mtns   Palmyra Peak/T-Ride
+BCOURAY8K  38.0175 -107.6779 South Mtns   Ouray 8k
+BCYANKEEBO 37.9875 -107.7811 South Mtns   Yankee Boy Basin
+BCUNCOMPAH 38.0666 -107.4375 South Mtns   Uncompahgre Peak
+BCSLUMGULL 37.9915 -107.2045 South Mtns   Slumgullion
+BCSUNSHINE 37.9209 -107.3979 South Mtns   Sunshine Peak
+BCLAGARITA 37.9252 -106.8361 South Mtns   La Garita Peak
+BCRICO9K   37.6900 -108.0289 South Mtns   Rico 9k
+BCEXPECTAT 37.6942 -108.0684 South Mtns   Expectation Mountain
+BCOPHIRPAS 37.8506 -107.7795 South Mtns   Ophir Pass
+BCWESTRIVE 37.9789 -107.6758 South Mtns   West Riverside
+BCTRICOPEA 37.8985 -107.7232 South Mtns   Trico Peak
+BCSILVERTO 37.8131 -107.6703 South Mtns   Silverton 9.5k
+BCEUREKAMO 37.8899 -107.5860 South Mtns   Eureka Mtn (Animas Forks)
+BCSULTANCR 37.7666 -107.7043 South Mtns   Sultan Creek
+BCENGINEER 37.7008 -107.8011 South Mtns   Engineer Mountain
+BCCHICAGOB 37.6168 -107.6051 South Mtns   Chicago Basin
+BCRIOGRAND 37.6789 -107.3594 South Mtns   Rio Grand Pyramid
+BCPURGATOR 37.6291 -107.8159 South Mtns   Purgatory 9k
+BCCOLUMBUS 37.4316 -108.0231 South Mtns   Columbus Basin
+BCENDLICHM 37.5041 -107.6022 South Mtns   Endlich Mesa
+BCWOLFCREE 37.4831 -106.8023 South Mtns   Wolf Creek Pass
+BCCUMBRES  37.0206 -106.4500 South Mtns   Cumbres
+BCSOUTHCOL 37.9667 -105.5681 South Mtns   South Colony
+BCBLANCAPE 37.5837 -105.4837 South Mtns   Blanca Peak

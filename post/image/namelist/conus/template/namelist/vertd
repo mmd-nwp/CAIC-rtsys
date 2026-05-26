@@ -1,0 +1,152 @@
+ &userin
+ title='USFS MM5 8km Domain',
+ titlecolor='def.foreground', idotitle=1,
+ flmin=.005, frmax=.92, fbmin=.20, ftmax=.95,
+ ptimes=FCST,
+ ptimeunits='h',timezone=-7,iusdaylightrule=0,
+ tacc=600.,iinittime=0,ivalidtime=1,inearesth=1,
+ ntextq=0,ntextcd=0,fcoffset=0.0,
+ icgmsplit=0, itrajcalc=0, maxfld=10,imakev5d=0
+ &end
+-------------------------------------------------------------------------------
+                                 COLOR TABLE
+COLOR                | RED  | GREEN | BLUE | NUMBER
+-------------------------------------------------------------------------------
+def.background       | 1.00 | 1.00  | 1.00 |  0       (DEFAULT BACKGROUND)
+def.foreground       | 0.00 | 0.00  | 0.00 |  1       (DEFAULT FOREGROUND)
+light.gray           | 0.75 | 0.75  | 0.75 |  2
+lmed.gray            | 0.65 | 0.65  | 0.65 |  3
+med.gray             | 0.50 | 0.50  | 0.50 |  3
+dark.gray            | 0.25 | 0.25  | 0.25 |  4
+red                  | 1.00 | 0.00  | 0.00 |  5
+orange               | 1.00 | 0.50  | 0.00 |  6
+yellow               | 1.00 | 1.00  | 0.00 |  7
+green                | 0.00 | 1.00  | 0.00 |  8
+blue                 | 0.00 | 0.00  | 1.00 |  9
+violet               | 0.50 | 0.00  | 0.50 | 10
+light.red            | 1.00 | 0.50  | 0.50 | 11
+light.orange         | 1.00 | 0.75  | 0.50 | 12
+light.yellow         | 1.00 | 1.00  | 0.50 | 13
+light.green          | 0.50 | 1.00  | 0.50 | 14
+light.blue           | 0.50 | 0.50  | 1.00 | 15
+light.violet         | 0.75 | 0.50  | 0.75 | 16
+dark.red             | 0.50 | 0.00  | 0.00 | 17
+brown                | 0.50 | 0.25  | 0.00 | 18
+dark.yellow          | 0.50 | 0.50  | 0.00 | 19
+dark.green           | 0.00 | 0.50  | 0.00 | 20
+dark.blue            | 0.00 | 0.00  | 0.50 | 21
+c23                  | 0.40 | 0.20  | 0.00 | 23
+c26                  | 1.00 | 0.50  | 0.00 | 26
+c27                  | 1.00 | 1.00  | 0.95 | 27
+c30                  | 1.00 | 1.00  | 0.05 | 30
+c31                  | 0.95 | 1.00  | 0.95 | 31
+c34                  | 0.05 | 1.00  | 0.05 | 34
+c35                  | 0.95 | 0.95  | 1.00 | 35
+c38                  | 0.05 | 0.05  | 1.00 | 38
+c43                  |0.    |0.0620 |1.0000| 43
+c44                  |0.1250|0.     |1.0000| 44
+c45                  |0.3120|0.     |1.0000| 45
+c46                  |0.5000|0.     |1.0000| 46
+c47                  |0.6880|0.     |1.0000| 47
+c48                  |0.8750|0.     |1.0000| 48
+c49                  |1.0000|0.     |0.9380| 49
+c50                  |1.0000|0.     |0.7500| 50
+c51                  |1.0000|0.     |0.5620| 51
+c52                  |1.0000|0.     |0.3750| 52
+c53                  |1.0000|0.     |0.1880| 53
+magenta              | 1.00 | 0.50  | 1.00 | 54
+very.dark.blue       | 0.00 | 0.00  | 0.30 | 55
+black                | 0.00 | 0.00  | 0.00 | 56
+white                | 1.00 | 1.00  | 1.00 | 57
+c58                  |0.5   |0.5    |0.85  | 58
+c59                  |1.00  |0.95   |0.95  | 59
+c62                  |1.00  |0.05   |0.05  | 62
+c63                  |1.00  |0.80   |1.00  | 63
+c66                  |1.00  |0.00   |1.00  | 66
+medium.red           |0.80  |0.0    |0.0   | 67
+lighter.blue         | 0.75 | 0.94  | 1.00 | 68
+light.brown          | 1.00 |  .60  |  .40 | 69
+dark.violet          | 0.25 | 0.00  | 0.25 | 70
+medium.brown         |0.68  |0.4    |0.0   | 71
+lightest.red         | 1.00 | 0.85  | 0.85 | 72
+med.dark.gray        | 0.40 | 0.40  | 0.40 | 73
+---------------------------------------------------------------------------
+===========================================================================
+----------------------    Plot Specification Table    ---------------------
+===========================================================================
+# Surface dew point bias.
+# ConUS domain.
+feld=tdbiasFCST; ptyp=hc; cmth=fill; cint=1; >
+  xwin=1,600; ywin=1,450; >
+  hvbr=1; smth=5; nmsg; cbeg=-15; cend=15;>
+  nmin; nmsg;>
+  titl=30-Day_Average_Dewpoint_Bias_(F);>
+  cosq=-15,def.background,>
+       -15,c66, -5,c63,>
+        -5,c38,  0,c35,>
+         0,c27,  5,c30,>
+         5,c59, 15,c62,>
+        15,def.background
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=1.5,1.5; crsb=599.5,449.5
+===========================================================================
+# Northwest domain.
+feld=tdbiasFCST; ptyp=hc; cmth=fill; cint=1; >
+  xwin=16,316; ywin=159,384; >
+  hvbr=1; smth=5; nmsg; cbeg=-15; cend=15;>
+  nmin; nmsg;>
+  titl=30-Day_Average_Dewpoint_Bias_(F);>
+  cosq=-15,def.background,>
+       -15,c66, -5,c63,>
+        -5,c38,  0,c35,>
+         0,c27,  5,c30,>
+         5,c59, 15,c62,>
+        15,def.background
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=16.5,159.5; crsb=315.5,383.5
+===========================================================================
+# Southwest domain.
+feld=tdbiasFCST; ptyp=hc; cmth=fill; cint=1; >
+  xwin=16,332; ywin=16,253; >
+  hvbr=1; smth=5; nmsg; cbeg=-15; cend=15;>
+  nmin; nmsg;>
+  titl=30-Day_Average_Dewpoint_Bias_(F);>
+  cosq=-15,def.background,>
+       -15,c66, -5,c63,>
+        -5,c38,  0,c35,>
+         0,c27,  5,c30,>
+         5,c59, 15,c62,>
+        15,def.background
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=16.5,16.5; crsb=331.5,252.5
+===========================================================================
+# Northeast domain.
+feld=tdbiasFCST; ptyp=hc; cmth=fill; cint=1; >
+  xwin=300,600; ywin=159,384; >
+  hvbr=1; smth=5; nmsg; cbeg=-15; cend=15;>
+  nmin; nmsg;>
+  titl=30-Day_Average_Dewpoint_Bias_(F);>
+  cosq=-15,def.background,>
+       -15,c66, -5,c63,>
+        -5,c38,  0,c35,>
+         0,c27,  5,c30,>
+         5,c59, 15,c62,>
+        15,def.background
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=300.5,159.5; crsb=599.5,383.5
+===========================================================================
+# Southeast domain.
+feld=tdbiasFCST; ptyp=hc; cmth=fill; cint=1; >
+  xwin=242,574; ywin=16,265; >
+  hvbr=1; smth=5; nmsg; cbeg=-15; cend=15;>
+  nmin; nmsg;>
+  titl=30-Day_Average_Dewpoint_Bias_(F);>
+  cosq=-15,def.background,>
+       -15,c66, -5,c63,>
+        -5,c38,  0,c35,>
+         0,c27,  5,c30,>
+         5,c59, 15,c62,>
+        15,def.background
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=def.foreground
+feld=box; ptyp=hb; crsa=242.5,16.5; crsb=573.5,264.5
+===========================================================================

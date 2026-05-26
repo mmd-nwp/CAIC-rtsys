@@ -1,0 +1,18 @@
+DOMAIN
+feld=TD2; ptyp=hc; cmth=fill; hvbr=1; cint=TDCINT; >
+  CORNERS
+  smth=TDSMTH; cbeg=0; cend=80;>
+  nmin; nmsg; titl=Surface_Dew_Point_(F)_and_Wind_(kt);>
+  cosq=  0,brown,>
+         0,c62, 20,c59,>
+        20,c30, 40,c27,>
+        40,c35, 60,c38,>
+        60,c31, 80,c34,>
+        80,def.background
+feld=TD2; ptyp=hc; linw=1; cint=TDCINT; colr=med.gray;>
+   smth=TDSMTH; mjsk=1; nohl; nmin; nmsg; nttl
+MAP
+feld=U10,V10; ptyp=hv; vcmx=-15; fulb=10kts;>
+   linw=1; smth=0; intv=WINDCINT; colr=dark.gray; nmsg; nmin; nmsg; nttl
+BOX
+===========================================================================

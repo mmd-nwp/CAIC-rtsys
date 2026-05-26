@@ -1,0 +1,73 @@
+ &userin
+ title='LAPS 8km Domain',
+ titlecolor='def.foreground', idotitle=1,
+ flmin=.005, frmax=.92, fbmin=.20, ftmax=.95,
+ ptimes=FCST,
+ ptimeunits='h',timezone=-7,iusdaylightrule=1,
+ tacc=600.,iinittime=0,ivalidtime=2,inearesth=1,
+ ntextq=0,ntextcd=0,fcoffset=0.0,
+ icgmsplit=0, itrajcalc=0, maxfld=10,imakev5d=0
+ &end
+ &trajcalc
+ rtim=15,ctim=6,dtfile=3600.,dttraj=600.,vctraj='s',
+ xjtraj=95,90,85,80,75,70,65,80.6,80.6,80.6,80.6,80.6,80.6,
+ yitraj=50,55,60,65,70,75,80,77,77,77,77,77,77,
+ zktraj=.9,.9,.9,.9,.9,.9,.9,.99,.9,.8,.7,.6,.5,
+ ihydrometeor=0
+ &end
+-----------------------------------------------------------------
+                           COLOR TABLE
+COLOR                | RED  | GREEN | BLUE |
+-----------------------------------------------------------------
+def.background       | 1.00 | 1.00  | 1.00 |  1  (DEFAULT BACKGROUND)
+def.foreground       | 0.00 | 0.00  | 0.00 |  2  (DEFAULT FOREGROUND)
+white                | 1.00 | 1.00  | 1.00 |  3
+black                | 0.00 | 0.00  | 0.00 |  4
+cwhite               | 0.99 | 0.99  | 0.99 |  5
+cblack               | 0.01 | 0.01  | 0.01 |  6
+yellow               | 1.00 | 1.00  | 0.00 |  7
+-----------------------------------------------------------------
+===========================================================================
+----------------------    Plot Specification Table    ---------------------
+===========================================================================
+# Cloud cover.
+# ConUS domain.
+feld=lcv; ptyp=hc; cmth=fill; cbeg=5; cint=5; cend=95; hvbr=1; nohl; nmin;>
+ xwin=1,600; ywin=1,450; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=1.5,1.5; crsb=599.5,449.5
+===========================================================================
+# Northwest domain.
+feld=lcv; ptyp=hc; cmth=fill; cbeg=5; cint=5; cend=95; hvbr=1; nohl; nmin;>
+ xwin=16,316; ywin=159,384; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=16.5,159.5; crsb=315.5,383.5
+===========================================================================
+# Southwest domain.
+feld=lcv; ptyp=hc; cmth=fill; cbeg=5; cint=5; cend=95; hvbr=1; nohl; nmin;>
+ xwin=16,332; ywin=16,253; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=16.5,16.5; crsb=331.5,252.5
+===========================================================================
+# Northeast domain.
+feld=lcv; ptyp=hc; cmth=fill; cbeg=5; cint=5; cend=95; hvbr=1; nohl; nmin;>
+ xwin=300,600; ywin=159,384; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=300.5,159.5; crsb=599.5,383.5
+===========================================================================
+# Southeast domain.
+feld=lcv; ptyp=hc; cmth=fill; cbeg=5; cint=5; cend=95; hvbr=1; nohl; nmin;>
+ xwin=242,574; ywin=16,265; >
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+feld=map; ptyp=hb; outy=Earth..2L4; ouds=solid; oulw=2; cint=360; colr=yellow
+feld=box; ptyp=hb; crsa=242.5,16.5; crsb=573.5,264.5
+===========================================================================

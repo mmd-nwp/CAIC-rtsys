@@ -1,0 +1,13 @@
+DOMAIN
+feld=hah; ptyp=hc; hvbr=1; cmth=fill; cint=1; >
+  CORNERS
+  smth=1; cbeg=3; cend=6;>
+  nmin; nmsg; titl=Haines_Index_(700-500mb);>
+  cosq=            3,c38,>
+         3,c34,    4,c34,>
+         4,c30,    5,c30,>
+         5,c66,    6,c66,>
+         6,c62
+MAP
+BOX
+===========================================================================

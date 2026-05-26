@@ -1,0 +1,8 @@
+DOMAIN
+feld=cld; ptyp=hc; cmth=fill; cbeg=CLDCINT; cint=CLDCINT; cend=CLDEND; nohl; nmin; hvbr=1;>
+ CORNERS
+ titl=Cloud_Cover_(%);>
+ cosq=0,cblack,100,cwhite
+CLOUD
+BOX
+===========================================================================
